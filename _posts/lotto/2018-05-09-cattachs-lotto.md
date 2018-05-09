@@ -8,7 +8,7 @@ category: lotto
 2nd: 2
 3rd: 3
 4th: 4
-5th: 2
+5th: 5
 bonus: 50
 jackpot: 1000
 description: This weeks lotto numbers
