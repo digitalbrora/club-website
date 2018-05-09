@@ -30,6 +30,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "match-report"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Match Date", name: "match-date", widget: "date"}
       - {label: "Category", name: "category", widget: "hidden", default: "report"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
