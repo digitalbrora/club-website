@@ -18,7 +18,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "select", options: ["boardroom", "chairmans-chat", "event", "match", "squad"]}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image", name: "feature-image", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "reports" # Used in routes, e.g., /admin/collections/blog

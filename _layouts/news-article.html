@@ -3,7 +3,11 @@ layout: base
 ---
 <article class="">
   <h1>{{ page.title }}</h1>
+  {% if page.feature-image %}
   <img src="{{ page.thumbnail }}" alt="">
+  {% else %}
+  <img src="/build/images/uploads/image-placeholder.png" alt="">
+  {% endif %}
   <p><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
   {{ content | remove: page.excerpt }}
 </article>
