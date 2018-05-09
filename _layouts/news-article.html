@@ -3,7 +3,7 @@ layout: base
 ---
 <article class="">
   <h1>{{ page.title }}</h1>
-  <img src="" alt="">
+  <img src="{{ page.thumbnail }}" alt="">
   <p><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
   {{ content | remove: page.excerpt }}
 </article>
