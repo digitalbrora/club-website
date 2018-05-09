@@ -3,7 +3,7 @@ layout: news-article
 title: Testing image handling from the admin panel
 date: '2018-05-09T13:59:33+01:00'
 category: match
-thumbnail: /build/images/uploads/montrose-pyramid-playoff-fans.jpg
+feature-image: /build/images/uploads/montrose-pyramid-playoff-fans.jpg
 description: Brora fans in fine voice at Montrose
 ---
 Just another test.
