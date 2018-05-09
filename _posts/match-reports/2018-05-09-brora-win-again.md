@@ -1,5 +1,5 @@
 ---
-layout: news-article
+layout: match-report
 title: Brora win again
 date: '2018-05-09T12:19:50+01:00'
 category: report
