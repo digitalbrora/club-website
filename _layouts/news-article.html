@@ -2,5 +2,12 @@
 layout: base
 ---
 <article class="">
-  {{ content }}
+  <h1>{{ page.title }}</h1>
+  <img src="" alt="">
+  <p><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
+  {{ content | remove: page.excerpt }}
 </article>
+<aside class="">
+  <p>It was written on {{ page.date }}</p>
+  <p>This is posted under {{ page.category }} news</p>
+</aside>
