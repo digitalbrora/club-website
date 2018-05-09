@@ -35,3 +35,24 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "lotto" # Used in routes, e.g., /admin/collections/blog
+    label: "Lotto Results" # Used in the UI
+    folder: "_posts/lotto" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "lotto"}
+      - {label: "Title", name: "title", widget: "string", default: "Cattachs Lotto"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draw Date", name: "draw-date", widget: "date"}
+      - {label: "Category", name: "category", widget: "hidden", default: "lotto"}
+      - {label: "First Number", name: "1st", widget: "number", valueType: "int", min: 1, max: 20 }
+      - {label: "Second Number", name: "2nd", widget: "number", valueType: "int", min: 1, max: 20 }
+      - {label: "Third Number", name: "3rd", widget: "number", valueType: "int", min: 1, max: 20 }
+      - {label: "Fourth Number", name: "4th", widget: "number", valueType: "int", min: 1, max: 20 }
+      - {label: "Fifth Number", name: "5th", widget: "number", valueType: "int", min: 1, max: 20 }
+      - {label: "Next Week's Bonus", name: "bonus", widget: "number", valueType: "int", default: 50 }
+      - {label: "Next Week's Jackpot", name: "jackpot", widget: "number", valueType: "int", default: 50 }
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Short summary for Social Media", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
