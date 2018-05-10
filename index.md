@@ -17,3 +17,14 @@ layout: base
 {% endunless %}
 {% endfor %}
 <ul>
+
+<h2>Latest News</h2>
+{% assign latest-news = site.posts %}
+
+<ul>
+{% for post in latest-news limit: 3 %}
+<li>
+<a href="{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+<ul>

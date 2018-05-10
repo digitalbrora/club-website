@@ -1,6 +1,10 @@
 ---
 layout: base
 ---
-{{ content }}
 
-<p>{{ page.bonus }}</p>
+<h3>Draw date - {{ page.draw-date }}</h3>
+<span>{{ page.first-lotto-number }} - {{ page.second-lotto-number }} - {{ page.third-lotto-number }} - {{ page.fourth-lotto-number }} - {{ page.fifth-lotto-number }}</span>
+
+<p>Next week's jackpot £{{ page.jackpot }}</p>
+<p>Next week's bonus £{{ page.bonus }}</p>
+{{ page.content }}
