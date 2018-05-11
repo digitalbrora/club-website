@@ -10,31 +10,28 @@ layout: base
 
 <ul>
 {% for page in site.pages %}
-{% unless page.name == "feed.xml" or page.name == "404.html" or page.name == "index.md" %}
-<li>
+{% unless page.name == "feed.xml" or page.name == "404.html" or page.name == "index.html" %}
+  <li>
 <a href="{{ page.url }}">{{ page.name }}</a>
-</li>
+  </li>
 {% endunless %}
 {% endfor %}
-<ul>
+</ul>
 
 <h2>Latest News</h2>
 {% assign latest-news = site.posts %}
-
-<ul>
+  <ul>
 {% for post in latest-news limit: 3 %}
-<li>
-<a href="{{ post.url }}">{{ post.title }}</a>
-</li>
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
 {% endfor %}
-<ul>
+  </ul>
 
 <h2>Next Game</h2>
-{% assign fixture = site.fixtures %}
-<ul>
-{% for match in fixture limit: 1 %}
-<li>
-{{ match.home-team }} v {{ match.away-team }} - {{ match.competition }}
-</li>
+{% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}
+  <ul>
+{% for match in outstanding limit: 1 %}
+    <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
 {% endfor %}
-<ul>
+  </ul>

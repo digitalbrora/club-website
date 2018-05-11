@@ -21,6 +21,22 @@ collections:
       - {label: "Featured Image", name: "feature-image", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "previews" # Used in routes, e.g., /admin/collections/blog
+    label: "Match Reports" # Used in the UI
+    folder: "_posts/match-previews" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "match-preview"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Match Date", name: "match-date", widget: "date"}
+      - {label: "Category", name: "category", widget: "hidden", default: "preview"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Short summary for Social Media", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "reports" # Used in routes, e.g., /admin/collections/blog
     label: "Match Reports" # Used in the UI
     folder: "_posts/match-reports" # The path to the folder where the documents are stored
@@ -47,6 +63,7 @@ collections:
       - {label: "Season", name: "season", widget: "number", default: "2018"}
       - {label: "Competition", name: "competition", widget: "string"}
       - {label: "Match Date", name: "match-date", widget: "date"}
+      - {label: "Kick Off", name: "kick-off", widget: "string", default: "15:00"}
       - {label: "Home Team", name: "home-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
       - {label: "Away Team", name: "away-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
       - {label: "Status", name: "status", widget: "select", options: ["outstanding", "postponed", "abandoned", "completed"], default: "outstanding"}
