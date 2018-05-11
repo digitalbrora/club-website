@@ -42,10 +42,9 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{home-team}}-v-{{away-team}}-{{competiton}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string", default: {{match-date}}}
+      - {label: "Match Date", name: "title", widget: "date"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Season", name: "season", widget: "number", default: "2018"}
-      - {label: "Match Date", name: "match-date", widget: "date"}
       - {label: "Competition", name: "competiton", widget: "string"}
       - {label: "Home Team", name: "home-team", widget: "string"}
       - {label: "Away Team", name: "away-team", widget: "string"}
