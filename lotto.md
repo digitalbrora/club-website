@@ -12,6 +12,7 @@ layout: base
 <span>{{ results.draw-date }} -- {{ results.first-lotto-number }} - {{ results.second-lotto-number }} - {{ results.third-lotto-number }} - {{ results.fourth-lotto-number }} - {{ results.fifth-lotto-number }}</span>
 <p>£{{ results.bonus }}</p>
 <p>£{{ results.jackpot }}</p>
+{{ results.content }}
 {% endfor %}
 
 <h3>Previous results</h3>
