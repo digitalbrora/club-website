@@ -32,6 +32,8 @@ plugins:
 
 collections:
   fixtures:
+    output: false
+  clubs:
     output: true
 
 # Exclude from processing.
