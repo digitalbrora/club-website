@@ -45,7 +45,7 @@ collections:
       - {label: "Title", name: "title", widget: "string", default: "Add a title in the format 'Buckie home' or 'Cove away' etc"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Season", name: "season", widget: "number", default: "2018"}
-      - {label: "Competition", name: "competiton", widget: "relation", collection: "competitions", searchFields: ["title", "name"], valueField: "name", default: ""}
+      - {label: "Competition", name: "competition", widget: "relation", collection: "competitions", searchFields: ["title", "name"], valueField: "name", default: "Scottish Highland Football League"}
       - {label: "Match Date", name: "match-date", widget: "date"}
       - {label: "Home Team", name: "home-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
       - {label: "Away Team", name: "away-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}

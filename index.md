@@ -34,7 +34,7 @@ layout: base
 <ul>
 {% for match in fixture limit: 1 %}
 <li>
-<a href="{{ fixture.url }}">{{ fixture.title }}</a>
+{{ match.home-team }} v {{ match.away-team }} - {{ match.competition }}
 </li>
 {% endfor %}
 <ul>
