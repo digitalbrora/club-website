@@ -78,3 +78,13 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "clubs" # Used in routes, e.g., /admin/collections/blog
+    label: "Clubs" # Used in the UI
+    folder: "_clubs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Badge", name: "badge", widget: "image", required: false}
+      - {label: "Ground", name: "ground", widget: "string"}
