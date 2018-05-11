@@ -28,3 +28,13 @@ layout: base
 </li>
 {% endfor %}
 <ul>
+
+<h2>Next Game</h2>
+{% assign fixture = site.fixtures %}
+<ul>
+{% for match in fixture limit: 1 %}
+<li>
+<a href="{{ fixture.url }}">{{ fixture.title }}</a>
+</li>
+{% endfor %}
+<ul>

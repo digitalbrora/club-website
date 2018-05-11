@@ -45,10 +45,10 @@ collections:
       - {label: "Title", name: "title", widget: "string", default: "Add a title in the format 'Buckie home' or 'Cove away' etc"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Season", name: "season", widget: "number", default: "2018"}
-      - {label: "Competition", name: "competiton", widget: "relation", collection: "competitions", searchFields: ["title"], valueField: "title"}
+      - {label: "Competition", name: "competiton", widget: "relation", collection: "competitions", searchFields: ["title", "name"], valueField: "name", default: ""}
       - {label: "Match Date", name: "match-date", widget: "date"}
       - {label: "Home Team", name: "home-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
-      - {label: "Away Team", name: "away-team", widget: "relation", collection: "clubs", searchFields: ["title", "name"], valueField: "name"}
+      - {label: "Away Team", name: "away-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
       - {label: "Status", name: "status", widget: "select", options: ["outstanding", "postponed", "abandoned", "completed"], default: "outstanding"}
       - {label: "Home Team Score", name: "home-team-score", widget: "number", required: false}
       - {label: "Away Team Score", name: "away-team-score", widget: "number", required: false}
