@@ -6,6 +6,8 @@ competition: League
 match-date: '2018-05-11'
 home-team: Brora Rangers
 away-team: Wick Academy
-status: outstanding
+status: completed
+home-team-score: '3'
+away-team-score: '0'
 ---
 
