@@ -47,7 +47,7 @@ collections:
       - {label: "Season", name: "season", widget: "number", default: "2018"}
       - {label: "Competition", name: "competiton", widget: "string"}
       - {label: "Match Date", name: "match-date", widget: "date"}
-      - {label: "Home Team", name: "home-team", widget: "relation", collection: "clubs", searchFields: "title", valueField: "title"}
+      - {label: "Home Team", name: "home-team", widget: "relation", collection: "clubs", searchFields: ["title"], valueField: "title"}
       - {label: "Away Team", name: "away-team", widget: "string"}
       - {label: "Status", name: "status", widget: "select", options: ["outstanding", "postponed", "abandoned", "completed"], default: "outstanding"}
       - {label: "Home Team Score", name: "home-team-score", widget: "number", required: false}
