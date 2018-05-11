@@ -33,5 +33,12 @@ layout: base
   <ul>
 {% for match in outstanding limit: 1 %}
     <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
+
+    {% assign previews = site.posts | where: 'category', 'preview' %}
+    {% for fixture in previews %}
+    {% if match.match-date == fixture.match-date %}
+    <a href="{{ fixture.url }}">{{ fixture.title }}</a>
+    {% endif %}
+    {% endfor %}
 {% endfor %}
   </ul>
