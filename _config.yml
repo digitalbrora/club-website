@@ -35,6 +35,8 @@ collections:
     output: false
   clubs:
     output: true
+  competitons:
+    output: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
