@@ -9,7 +9,7 @@ layout: base
 <p>This will include a list of all the upcoming fixtures</p>
 
 {% for match in site.fixtures %}
-<a href="{{ match.url }}">{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }}</a>
+<a href="{{ match.url }}">{{ match.title }} - {{ match.home-team }} v {{ match.away-team }}</a>
 {% endfor %}
 
 <p>Match previews will be added in the 'News' section and linked to each fixture</p>
