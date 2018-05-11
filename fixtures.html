@@ -6,11 +6,22 @@ layout: base
 ---
 <h1>This is the fixtures page</h1>
 
-<p>This will include a list of all our fixtures, including results where appropriate</p>
+<h2>Our outstanding fixtures</h2>
 {% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}
 <ul>
 {% for match in outstanding %}
-<li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
+  <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
 {% endfor %}
 </ul>
+
+<h2>Our completed fixtures</h2>
+{% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
+<ul>
+{% for match in completed %}
+  <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
+{% endfor %}
+</ul>
+
+
+
 <p>Match previews and reports will be added in the 'News' section and linked to each fixture</p>
