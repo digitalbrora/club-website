@@ -18,6 +18,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "select", options: ["boardroom", "chairmans-chat", "event", "match", "squad"]}
+      - {label: "People", name: 'tags', widget: "list"}
       - {label: "Featured Image", name: "feature-image", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -82,7 +83,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "lotto"}
       - {label: "Title", name: "title", widget: "string", default: "Cattachs Lotto"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Puwidget: "hidden",blish Date", name: "date", widget: "datetime"}
       - {label: "Draw Date", name: "draw-date", widget: "date"}
       - {label: "Category", name: "category", widget: "hidden", default: "lotto"}
       - {label: "First Number", name: "first-lotto-number", widget: "number", valueType: "int", min: 1, max: 20 }
@@ -115,4 +116,14 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Badge", name: "badge", widget: "image", required: false}
+      - {label: "Sponsor", name: "sponsor", widget: "string"}
+
+  - name: "people" # Used in routes, e.g., /admin/collections/blog
+    label: "People" # Used in the UI
+    folder: "_people" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["current squad", "past squad", "management", "behind the scenes"]}
       - {label: "Sponsor", name: "sponsor", widget: "string"}
