@@ -57,3 +57,13 @@ layout: base
       {% endfor %}
   {% endfor %}
     </ul>
+
+<h2>Cattachs Lotto</h2>
+{% assign lotto = site.posts | where: "category", "lotto" %}
+
+{% for results in lotto limit: 1 %}
+<span>{{ results.draw-date }} -- {{ results.first-lotto-number }} - {{ results.second-lotto-number }} - {{ results.third-lotto-number }} - {{ results.fourth-lotto-number }} - {{ results.fifth-lotto-number }}</span>
+<p>£{{ results.bonus }}</p>
+<p>£{{ results.jackpot }}</p>
+{{ results.excerpt }}
+{% endfor %}
