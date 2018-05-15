@@ -21,7 +21,7 @@ layout: base
 <h2>Latest News</h2>
 {% assign latest-news = site.posts %}
   <ul>
-{% for post in latest-news limit: 3 %}
+{% for post in latest-news limit: 6 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
@@ -42,3 +42,18 @@ layout: base
     {% endfor %}
 {% endfor %}
   </ul>
+
+  <h2>Latest Result</h2>
+  {% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
+    <ul>
+  {% for match in completed limit: 1 %}
+      <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
+
+      {% assign report = site.posts | where: 'category', 'report' %}
+      {% for fixture in report %}
+      {% if match.match-date == fixture.match-date %}
+      <a href="{{ fixture.url }}">{{ fixture.title }}</a>
+      {% endif %}
+      {% endfor %}
+  {% endfor %}
+    </ul>
