@@ -47,7 +47,7 @@ layout: base
   {% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
     <ul>
   {% for match in completed limit: 1 %}
-      <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
+      <li>{{ match.match-date }} - {{ match.home-team }} {{ match.home-team-score }}-{{ match.away-team-score }} {{ match.away-team }} - {{ match.status }}</li>
 
       {% assign report = site.posts | where: 'category', 'report' %}
       {% for fixture in report %}
