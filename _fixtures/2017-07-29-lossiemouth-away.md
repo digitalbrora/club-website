@@ -6,7 +6,9 @@ competition: League
 match-date: '2017-07-29'
 kick-off: '15:00'
 home-team: Lossiemouth
-away-team: Brora Rangersa
-status: outstanding
+away-team: Brora Rangers
+status: completed
+home-team-score: '0'
+away-team-score: '2'
 ---
 
