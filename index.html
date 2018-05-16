@@ -37,7 +37,7 @@ layout: base
     {% assign previews = site.posts | where: 'category', 'preview' %}
     {% for fixture in previews %}
     {% if match.match-date == fixture.match-date %}
-    <a href="{{ fixture.url }}">{{ fixture.title }}</a>
+    <a href="{{ fixture.url }}">Read the match preview</a>
     {% endif %}
     {% endfor %}
 {% endfor %}
@@ -52,7 +52,7 @@ layout: base
       {% assign report = site.posts | where: 'category', 'report' %}
       {% for fixture in report %}
       {% if match.match-date == fixture.match-date %}
-      <a href="{{ fixture.url }}">{{ fixture.title }}</a>
+      <a href="{{ fixture.url }}">Read the match report</a>
       {% endif %}
       {% endfor %}
   {% endfor %}
@@ -63,7 +63,7 @@ layout: base
 
 {% for results in lotto limit: 1 %}
 <span>{{ results.draw-date }} -- {{ results.first-lotto-number }} - {{ results.second-lotto-number }} - {{ results.third-lotto-number }} - {{ results.fourth-lotto-number }} - {{ results.fifth-lotto-number }}</span>
-<p>£{{ results.bonus }}</p>
-<p>£{{ results.jackpot }}</p>
+<p>Next week's Bonus £{{ results.bonus }}</p>
+<p>Next week's Jackpot £{{ results.jackpot }}</p>
 {{ results.excerpt }}
 {% endfor %}
