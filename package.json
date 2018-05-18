@@ -1,0 +1,27 @@
+{
+  "name": "gulp-local",
+  "version": "1.0.0",
+  "description": "Gulp tasks for local development",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-responsive": "^2.9.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbrora/club-website.git"
+  },
+  "author": "Ranald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalbrora/club-website/issues"
+  },
+  "homepage": "https://github.com/digitalbrora/club-website#readme"
+}
