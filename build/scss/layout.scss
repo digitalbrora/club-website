@@ -1,0 +1,40 @@
+.main-nav {
+  grid-area: main-nav;
+  background-color: black;
+  color: white;
+}
+.banner {
+  grid-area: banner;
+  background-color: red;
+  color: white;
+}
+.secondary-nav {
+  grid-area: secondary-nav;
+  background-color: black;
+  color: white;
+}
+
+header  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "main-nav main-nav main-nav main-nav"
+    "banner banner banner banner"
+    "secondary-nav secondary-nav secondary-nav secondary-nav";
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-item {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
