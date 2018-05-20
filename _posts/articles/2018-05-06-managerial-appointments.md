@@ -8,6 +8,7 @@ description: Brora Rangers announce two new managerial appointments
 ---
 Brora Rangers are delighted to announce the appointments of both Steven Mackay and Craig Campbell to their management team and they will take up their positions with immediate effect.
 
+
 Steven Mackay will take up his role as 1st team manager and Craig will support him in a coaching capacity. It is also the Club’s intention to appoint an assistant to work with Steven and no doubt he will be giving the matter his careful consideration.
 
 Brora Rangers Chairman, William Powrie, has no doubts that this is an exciting appointment for The Cattachs:

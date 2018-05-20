@@ -1,8 +1,4 @@
 @import "reset";
+@import "variables";
 @import "layout";
-
-// LAYOUT
-.banner {
-  font-family: 'Stardos Stencil', cursive;
-  font-size: 2em;
-}
+@import "fonts";

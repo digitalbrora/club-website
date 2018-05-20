@@ -1,0 +1,96 @@
+body  {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+//Header layout
+
+header  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 48px 1fr 1fr 1fr 48px;
+}
+
+.main-nav {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: $secondary-color;
+}
+
+.banner-main {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  background-color: $primary-color;
+}
+
+.banner-sub  {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 3;
+}
+
+.banner-info  {
+  grid-column-start: 3;
+  grid-column-end: -1;
+  grid-row-start: 4;
+}
+
+.secondary-nav {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 5;
+  background-color: $secondary-color;
+}
+
+.nav-menu {
+  display: flex;
+  height: 48px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lotto-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+// Main layout
+
+.news  {
+  //width: 100%;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1fr 1em;
+}
+
+.headline {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 1;
+  //grid-row-end: 2;
+}
+
+.feature-image {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 2;
+  //grid-row-end: 4;
+}
+
+.excerpt  {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 3;
+}
+
+.article  {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 4;
+}

@@ -1,3 +1,20 @@
-<section class="banner">
-  <h1>Brora Rangers FC</h1>
-</section>
+
+  <section class="banner-main">
+    <h1>Brora Rangers FC</h1>
+  </section>
+  <section class="banner-sub">
+    <h2>Since 1878</h2>
+  </section>
+  <section class="banner-info">
+    <h3>Cattach's Lotto</h3>
+    <ul class="lotto-numbers">
+      {% assign lotto = site.posts | where: "category", "lotto" %}
+      {% for results in lotto limit: 1 %}
+      <li>{{ results.first-lotto-number }}</li>
+      <li>{{ results.second-lotto-number }}</li>
+      <li>{{ results.third-lotto-number }}</li>
+      <li>{{ results.fourth-lotto-number }}</li>
+      <li>{{ results.fifth-lotto-number }}</li>
+      {% endfor %}
+    </ul>
+  </section>

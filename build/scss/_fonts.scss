@@ -1,0 +1,35 @@
+.nav-item a {
+  font-family: $sans-font;
+  color: white;
+  text-decoration: none;
+}
+
+.banner-main  {
+  font-family: $banner-font;
+  font-size: 2em;
+}
+
+.banner-sub  {
+  font-family: $banner-font;
+  font-size: 1.2em;
+}
+
+.banner-info  {
+  font-family: $banner-font;
+}
+
+article{
+  h1  {
+    font-family: $title-font;
+    font-size: 1.5em;
+    padding: 0.75em 0;
+  }
+  p {
+    font-family: $sans-font;
+    font-weight: 400;
+    padding: 0.75em 0;
+    strong  {
+      font-weight: 900;
+    }
+  }
+}
