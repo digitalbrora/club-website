@@ -23,12 +23,14 @@
 .banner-main  {
   background-color: $primary-color;
   color: white;
-  //background-image: url(/build/images/uploads/website-banner.png);
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  text-align: center;
+  background-image: url(/build/images/uploads/website-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  text-align: cover;
   padding-top: 1em;
   h1  {
+    padding-left: 2vw;
     transform: rotate(-10deg);
   }
 }
@@ -43,8 +45,8 @@
   .lotto-numbers{
     padding-top: 2em;
     li  {
-      padding: 4px;
-      background-color: red;
+      padding: 6px;
+      background-color: $primary-color;
       border: 2px solid #fff;
       border-radius: 50%;
       color: white;

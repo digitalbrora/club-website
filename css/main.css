@@ -48,7 +48,7 @@ table {
 
 .banner-main {
   font-family: "Stardos Stencil", cursive;
-  font-size: 2em; }
+  font-size: 2.3em; }
 
 .banner-sub {
   font-family: "Stardos Stencil", cursive;
@@ -94,9 +94,14 @@ article p {
 .banner-main {
   background-color: #a01a01;
   color: white;
-  text-align: center;
+  background-image: url(/build/images/uploads/website-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  text-align: cover;
   padding-top: 1em; }
   .banner-main h1 {
+    padding-left: 2vw;
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg); }
 
@@ -107,8 +112,8 @@ article p {
 .banner-info .lotto-numbers {
   padding-top: 2em; }
   .banner-info .lotto-numbers li {
-    padding: 4px;
-    background-color: red;
+    padding: 6px;
+    background-color: #a01a01;
     border: 2px solid #fff;
     border-radius: 50%;
     color: white; }
@@ -155,8 +160,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
 
 .news {
   width: 100%;
