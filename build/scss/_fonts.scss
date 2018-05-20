@@ -28,9 +28,12 @@ article{
     font-family: $sans-font;
     font-weight: 400;
     font-size: 1.2em;
+    line-height: 1.35;
     padding: 0.75em 0;
     strong  {
       font-weight: 900;
+      font-size: 1.25em;
+      line-height: 100%;
     }
   }
 }
