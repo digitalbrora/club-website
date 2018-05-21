@@ -14,11 +14,17 @@ header  {
   grid-template-rows: 48px 1fr auto 1fr 48px;
 }
 
+//.main-nav {
+//  grid-column-start: 1;
+//  grid-column-end: -1;
+//  grid-row-start: 1;
+//  grid-row-end: 2;
+//}
+
 .main-nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .banner-main {

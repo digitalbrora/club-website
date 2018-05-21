@@ -107,7 +107,7 @@ article p {
 
 .banner-sub {
   color: white;
-  padding-top: 0.8em; }
+  padding-top: 0.4em; }
 
 .banner-info .lotto-numbers {
   padding-top: 2em; }
@@ -130,10 +130,9 @@ header {
   grid-template-rows: 48px 1fr auto 1fr 48px; }
 
 .main-nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 2; }
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 .banner-main {
   grid-column-start: 1;
