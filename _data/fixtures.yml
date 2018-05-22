@@ -17,8 +17,12 @@ fixtures:
     home-score: '3'
     home-team: Brora Rangers
     kickoff: '15:00'
-  - competition: League
+  - away-score: '1'
+    away-team: Clachnacuddin
+    competition: League
     date: '2018-05-26'
+    home-score: '2'
+    home-team: Brora Rangers
     kickoff: '15:00'
   - competition: League
     date: '2018-06-02'
