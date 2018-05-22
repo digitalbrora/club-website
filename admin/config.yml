@@ -37,8 +37,8 @@ collections:
       - {label: "Draw Date", name: "draw-date", widget: "date"}
       - {label: "Category", name: "category", widget: "hidden", default: "lotto"}
       - {label: "Winning Numbers", name: "winning-numbers", widget: "list"}
-      - {label: "Bonus Winners", name: "bonus-winners", widget: "list", requiewd: false}
-      - {label: "Jacpot Winners", name: "jackpot-winners", widget: "list", required: false}
+      - {label: "Bonus Winners", name: "bonus-winners", widget: "list", required: false}
+      - {label: "Jackpot Winners", name: "jackpot-winners", widget: "list", required: false}
       - {label: "Next Week's Bonus", name: "bonus", widget: "number", valueType: "int", default: 50 }
       - {label: "Next Week's Jackpot", name: "jackpot", widget: "number", valueType: "int", default: 1000 }
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
