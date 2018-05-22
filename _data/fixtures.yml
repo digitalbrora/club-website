@@ -1,15 +1,31 @@
 fixtures:
-  - competition: Scottish Cup
+  - away-score: '1'
+    away-score-aet: '1'
+    away-score-pens: '5'
+    away-team: Brora Rangers
+    competition: Scottish Cup
     date: '2018-05-02'
+    home-score: '1'
+    home-score-aet: '1'
+    home-score-pens: '4'
     home-team: Buckie Thistle
     kickoff: '15:00'
-  - competition: League
+  - away-score: '0'
+    away-team: Cove Rangers
+    competition: League
     date: '2018-05-22'
+    home-score: '3'
     home-team: Brora Rangers
     kickoff: '15:00'
-  - competition: League
+  - away-score: '1'
+    away-team: Clachnacuddin
+    competition: League
     date: '2018-05-26'
+    home-score: '2'
+    home-team: Brora Rangers
     kickoff: '15:00'
-  - competition: League
+  - away-team: Brora Rangers
+    competition: League
     date: '2018-06-02'
+    home-team: Turriff Utd
     kickoff: '15:00'
