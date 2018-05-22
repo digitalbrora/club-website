@@ -88,9 +88,10 @@ collections:
             widget: list
             fields:
               - {label: Date, name: date, widget: date}
-              - {label: Kickoff, name: kickoff, widget: string, default: "15:00"}
+              - {label: Kickoff, name: kickoff, widget: string, default: 15:00}
               - {label: Venue, name: venue, widget: string, required: false}
               - {label: Competition, name: competition, widget: select, options: ["League", "Scottish Cup", "League Cup"]}
+              - {label: Home Team, name: home-team, widget: relation, collection: clubs, searchFields: ["title"], valueField: "title", displayFields: ["title"]}
 
   - name: "clubs" # Used in routes, e.g., /admin/collections/blog
     label: "Clubs" # Used in the UI
