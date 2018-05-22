@@ -11,12 +11,43 @@ layout: base
 {% assign fixtures = site.data.fixtures %}
 <ul>
   {% for matches in fixtures.fixtures %}
+  {% unless matches.home-score != nil %}
   <ul>
     <li>{{ matches.competition }}</li>
     <li>{{ matches.date }}</li>
     <li>{{ matches.kickoff }}</li>
     <li>{{ matches.home-team }}</li>
+    <li>{{ matches.home-score }}</li>
+    <li>{{ matches.away-score }}</li>
+    <li>{{ matches.away-team }}</li>
+
+    {% for preview in site.match-previews %}
+    {% if matches.date == preview.match-date %}
+    <p>We have a preview</p>
+    {% endif %}
+    {% endfor %}
+
   </ul>
+  {% endunless %}
+  {% endfor %}
+</ul>
+
+<h2>Our completed fixtures</h2>
+
+{% assign fixtures = site.data.fixtures %}
+<ul>
+  {% for matches in fixtures.fixtures reversed %}
+  {% unless matches.home-score == nil %}
+  <ul>
+    <li>{{ matches.competition }}</li>
+    <li>{{ matches.date }}</li>
+    <li>{{ matches.kickoff }}</li>
+    <li>{{ matches.home-team }}</li>
+    <li>{{ matches.home-score }}</li>
+    <li>{{ matches.away-score }}</li>
+    <li>{{ matches.away-team }}</li>
+  </ul>
+  {% endunless %}
   {% endfor %}
 </ul>
 
