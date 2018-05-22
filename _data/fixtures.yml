@@ -24,6 +24,8 @@ fixtures:
     home-score: '2'
     home-team: Brora Rangers
     kickoff: '15:00'
-  - competition: League
+  - away-team: Brora Rangers
+    competition: League
     date: '2018-06-02'
+    home-team: Turriff Utd
     kickoff: '15:00'
