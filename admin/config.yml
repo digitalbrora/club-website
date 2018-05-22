@@ -82,7 +82,6 @@ collections:
         name: "fixtures"
         file: "_data/fixtures.yml"
         fields:
-          - {label: Season, name: season, widget: string}
           - label: Fixtures
             name: fixtures
             widget: list
