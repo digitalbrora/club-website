@@ -10,3 +10,7 @@ fixtures:
   - competition: League
     date: '2018-06-02'
     kickoff: '15:00'
+  - competition: Scottish Cup
+    date: '2018-05-02'
+    home-team: Buckie Thistle
+    kickoff: '15:00'
