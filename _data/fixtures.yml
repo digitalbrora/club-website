@@ -2,6 +2,7 @@ season: '2018'
 fixtures:
   - competition: League
     date: '2018-05-22'
+    home-team: Brora Rangers
     kickoff: '15:00'
   - competition: League
     date: '2018-05-26'
