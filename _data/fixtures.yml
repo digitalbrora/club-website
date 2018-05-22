@@ -1,6 +1,11 @@
 season: '2018'
 fixtures:
-  - date: '2018-05-22'
+  - competition: League
+    date: '2018-05-22'
     kickoff: '15:00'
-  - date: '2018-05-26'
+  - competition: League
+    date: '2018-05-26'
+    kickoff: '15:00'
+  - competition: League
+    date: '2018-06-02'
     kickoff: '15:00'
