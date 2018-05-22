@@ -8,7 +8,7 @@ layout: base
 
 <h2>Our outstanding fixtures</h2>
 {% assign preview = site.posts | where: "category", "preview" %}
-
+{% assign report = site.posts | where: "category", "report" %}
 {% assign fixtures = site.data.fixtures %}
 <ul>
   {% for matches in fixtures.fixtures %}
@@ -49,6 +49,11 @@ layout: base
     <li>{{ matches.away-team }}</li>
   </ul>
   {% endunless %}
+  {% for article in preview %}
+  {% if article.match-date == matches.date %}
+  {{ article.url }}
+  {% endif %}
+  {% endfor %}
   {% endfor %}
 </ul>
 
