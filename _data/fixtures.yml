@@ -1,5 +1,9 @@
 season: '2018'
 fixtures:
+  - competition: Scottish Cup
+    date: '2018-05-02'
+    home-team: Buckie Thistle
+    kickoff: '15:00'
   - competition: League
     date: '2018-05-22'
     home-team: Brora Rangers
@@ -9,8 +13,4 @@ fixtures:
     kickoff: '15:00'
   - competition: League
     date: '2018-06-02'
-    kickoff: '15:00'
-  - competition: Scottish Cup
-    date: '2018-05-02'
-    home-team: Buckie Thistle
     kickoff: '15:00'
