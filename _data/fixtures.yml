@@ -29,3 +29,8 @@ fixtures:
     date: '2018-06-02'
     home-team: Turriff Utd
     kickoff: '15:00'
+  - away-team: Wick Academy
+    competition: League
+    date: '2018-06-09'
+    home-team: Brora Rangers
+    kickoff: '15:00'
