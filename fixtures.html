@@ -49,7 +49,7 @@ layout: base
     <li>{{ matches.away-team }}</li>
   </ul>
   {% endunless %}
-  {% for article in preview %}
+  {% for article in report %}
   {% if article.match-date == matches.date %}
   {{ article.url }}
   {% endif %}
