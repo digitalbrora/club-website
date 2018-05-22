@@ -89,8 +89,15 @@ collections:
               - {label: Date, name: date, widget: date}
               - {label: Kickoff, name: kickoff, widget: string, default: 15:00}
               - {label: Venue, name: venue, widget: string, required: false}
-              - {label: Competition, name: competition, widget: select, options: ["League", "Scottish Cup", "League Cup"]}
+              - {label: Competition, name: competition, widget: select, options: ["League", "Scottish Cup", "League Cup", "North of Scotland Cup"]}
               - {label: Home Team, name: home-team, widget: relation, collection: clubs, searchFields: ["title"], valueField: "title", displayFields: ["title"]}
+              - {label: Away Team, name: away-team, widget: relation, collection: clubs, searchFields: ["title"], valueField: "title", displayFields: ["title"]}
+              - {label: Home Score, name: home-score, widget: string, required: false}
+              - {label: Away Score, name: away-score, widget: string, required: false}
+              - {label: Home Score AET, name: home-score-aet, widget: string, required: false}
+              - {label: Away Score AET, name: away-score-aet, widget: string, required: false}
+              - {label: Home Score Pens, name: home-score-pens, widget: string, required: false}
+              - {label: Away Score Pens, name: away-score-pens, widget: string, required: false}
 
   - name: "clubs" # Used in routes, e.g., /admin/collections/blog
     label: "Clubs" # Used in the UI
