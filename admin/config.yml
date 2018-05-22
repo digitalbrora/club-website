@@ -83,6 +83,12 @@ collections:
         file: "_data/fixtures.yml"
         fields:
           - {label: Season, name: season, widget: string}
+          - label: Fixtures
+            name: fixtures
+            widget: list
+            fields:
+              - {label: Date, name: date, widget: date}
+              - {label: Kickoff, name: kickoff, widget: string}
 
   - name: "clubs" # Used in routes, e.g., /admin/collections/blog
     label: "Clubs" # Used in the UI
