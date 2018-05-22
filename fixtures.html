@@ -7,20 +7,20 @@ layout: base
 <h1>This is the fixtures page</h1>
 
 <h2>Our outstanding fixtures</h2>
-{% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}
+
+{% assign fixtures = site.data.fixtures %}
 <ul>
-{% for match in outstanding %}
-  <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
-{% endfor %}
+  {% for matches in fixtures.fixtures %}
+  <ul>
+    <li>{{ matches.competition }}</li>
+    <li>{{ matches.date }}</li>
+    <li>{{ matches.kickoff }}</li>
+    <li>{{ matches.home-team }}</li>
+  </ul>
+  {% endfor %}
 </ul>
 
-<h2>Our completed fixtures</h2>
-{% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
-<ul>
-{% for match in completed %}
-  <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
-{% endfor %}
-</ul>
+
 
 
 
