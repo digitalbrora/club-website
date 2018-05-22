@@ -19,7 +19,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "news"}
       - {label: "Category", name: "news-category", widget: "select", options: ["Event News", "Squad News", "Match News", "Boardroom News", "Chairman's Chat"]}
-      - {label: "People", name: 'tags', widget: "list"}
+      - {label: "Linked date", name: "linked-date", widget: "date", required: false}
+      - {label: "People", name: 'tags', widget: "list", required: false}
       - {label: "Featured Image", name: "feature-image", widget: "image", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
