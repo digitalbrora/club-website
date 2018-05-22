@@ -74,7 +74,7 @@ article p {
     line-height: 100%; }
 
 .main-nav, .secondary-nav {
-  background-color: #333; }
+  background-color: #a01a01; }
 
 .nav-menu {
   display: -webkit-box;
@@ -87,6 +87,8 @@ article p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .nav-menu .menu {
+    background-color: #333; }
 
 .nav-item a {
   padding: 12px 1px 12px 1px; }
@@ -118,11 +120,11 @@ article p {
     border-radius: 50%;
     color: white; }
 
-body {
+body, html {
   width: 100%; }
 
 img {
-  width: 99%; }
+  width: 100%; }
 
 header {
   display: grid;
@@ -130,9 +132,10 @@ header {
   grid-template-rows: 48px 1fr auto 1fr 48px; }
 
 .main-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%; }
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2; }
 
 .banner-main {
   grid-column-start: 1;
