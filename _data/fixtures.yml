@@ -4,3 +4,6 @@ fixtures:
     kickoff: '15:00'
   - date: '2018-05-26'
     kickoff: '15:00'
+  - competition: League
+    date: '2018-06-02'
+    kickoff: '15:00'
