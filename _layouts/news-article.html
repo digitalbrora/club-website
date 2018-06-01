@@ -5,7 +5,7 @@ layout: base
   <header class="news-header">
     <h1 class="title">{{ page.title | upcase }}</h1>
     {% if page.feature-image %}
-    <img class="feature-img" src="{{ page.feature-image }}" alt="">
+    <img class="feature-img" src="small-{{ page.feature-image }}" alt="">
     {% else %}
     <img src="/build/images/uploads/image-placeholder.png" alt="">
     {% endif %}
