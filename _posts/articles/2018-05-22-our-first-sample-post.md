@@ -9,6 +9,8 @@ tags:
   - Steven Mackay
 description: This is a test post
 ---
-This is a test news article
+This is a test news article. This first paragraph should stand out.
 
 It should help me link events and people to posts and have sane categories
+
+The layout must be able to cope with both long and short form articles

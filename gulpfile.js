@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var responsive = require('gulp-responsive');
 var shell = require('gulp-shell'); // Allow shell commands to be run from Gulp
 
 // Options for sass
@@ -27,8 +28,53 @@ gulp.task('watch', function(){
   // Other watchers
 })
 
+// Task for building responsive images
+
+gulp.task('article-images', function () {
+  return gulp.src('build/images/uploads/*.{png,jpg}')
+    .pipe(responsive({
+
+      // Resize all post images and ensure jpeg format
+      '*': [{
+        width: 425,
+        quality: 80,
+        progressive: true,
+        withoutEnlargement: false,
+        errorOnUnusedConfig: false,
+        withMetadata: false,
+        rename: { suffix: '-small' },
+      }, {
+        width: 520,
+        quality: 70,
+        progressive: true,
+        withoutEnlargement: false,
+        errorOnUnusedConfig: false,
+        withMetadata: false,
+        rename: { suffix: '-med' },
+      }, {
+        width: 768,
+        quality: 70,
+        progressive: true,
+        withoutEnlargement: false,
+        errorOnUnusedConfig: false,
+        withMetadata: false,
+        rename: { suffix: '-large' },
+      }, {
+        width: 90,
+        height: 90,
+        quality: 90,
+        progressive: true,
+        withoutEnlargement: false,
+        errorOnUnusedConfig: false,
+        withMetadata: false,
+        rename: { suffix: '-thumbnail' },
+      }],
+    }))
+    .pipe(gulp.dest('images/articles'));
+});
+
 // Task for building site for development:
 
 gulp.task('serve', shell.task(['bundle exec jekyll serve --livereload']));
 
-gulp.task('dev', ['watch','serve']);
+gulp.task('dev', ['watch','images','serve']);

@@ -22,6 +22,7 @@ collections:
       - {label: "Linked date", name: "linked-date", widget: "date", default: "", required: false}
       - {label: "People", name: 'tags', widget: "list", required: false}
       - {label: "Featured Image", name: "feature-image", widget: "image", required: false}
+      - {label: "Image Description", name: "img-alt", widget: "string", required: false}
       - {label: "Short summary for Social Media", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 

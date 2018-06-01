@@ -41,153 +41,31 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.nav-item a {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  text-decoration: none; }
+h1 {
+  font-family: 'Stardos Stencil', cursive; }
 
-.banner-main {
-  font-family: "Stardos Stencil", cursive;
-  font-size: 2.3em; }
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.25;
+  margin: 1.5em 0; }
 
-.banner-sub {
-  font-family: "Stardos Stencil", cursive;
-  font-size: 1.0em; }
+strong {
+  font-weight: 900; }
 
-.banner-info {
-  font-family: "Stardos Stencil", cursive; }
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; }
 
-article h1 {
-  font-family: "Stardos Stencil", cursive;
-  font-size: 1.5em;
-  padding: 0.75em 0; }
+img {
+  width: 100%; }
 
-article p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.2em;
-  line-height: 1.35;
-  padding: 0.75em 0; }
-  article p strong {
-    font-weight: 900;
-    font-size: 1.25em;
-    line-height: 100%; }
-
-.main-nav, .secondary-nav {
-  background-color: #a01a01; }
+.site-header {
+  display: grid; }
 
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .nav-menu .menu {
-    background-color: #333; }
-
-.nav-item a {
-  padding: 12px 1px 12px 1px; }
-
-.banner-main {
-  background-color: #a01a01;
-  color: white;
-  background-image: url(/build/images/uploads/website-banner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  text-align: cover;
-  padding-top: 1em; }
-  .banner-main h1 {
-    padding-left: 2vw;
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg); }
-
-.banner-sub {
-  color: white;
-  padding-top: 0.4em; }
-
-.banner-info .lotto-numbers {
-  padding-top: 2em; }
-  .banner-info .lotto-numbers li {
-    padding: 6px;
-    background-color: #a01a01;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    color: white; }
-
-body, html {
-  width: 100%; }
-
-img {
-  width: 100%; }
-
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 48px 1fr auto 1fr 48px; }
-
-.main-nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 2; }
-
-.banner-main {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: 5; }
-
-.banner-sub {
-  grid-column-start: 4;
-  grid-column-end: -1;
-  grid-row-start: 4; }
-
-.banner-info {
-  grid-column-start: 3;
-  grid-column-end: -1;
-  grid-row-start: 4; }
-
-.secondary-nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 5; }
-
-.lotto-numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-.news {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1em 1fr 1fr 1fr 1em; }
-
-.headline {
-  grid-column-start: 2;
-  grid-column-end: -2;
-  grid-row-start: 1;
-  text-align: center; }
-
-.feature-image {
-  grid-column-start: 2;
-  grid-column-end: -2;
-  grid-row-start: 2; }
-
-.excerpt {
-  grid-column-start: 2;
-  grid-column-end: -2;
-  grid-row-start: 3; }
-
-.article {
-  grid-column-start: 2;
-  grid-column-end: -2;
-  grid-row-start: 4; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
