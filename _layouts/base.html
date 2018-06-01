@@ -23,6 +23,7 @@
             <li class="nav-item"><a href="/sitemap/">...</a></li>
           </ul>
         </nav>
+        {% unless page.menu == 'lotto' %}
         <section>
           {% assign lotto = site.posts | where: "category", "lotto" %}
           {% for results in lotto limit: 1 %}
@@ -30,9 +31,11 @@
             {% for number in results.winning-numbers %}
             <li class="lotto-ball">{{ number }}</li>
             {% endfor %}
+            <li class="lotto-ball nav-item"><a href="/lotto/">...</a></li>
           </ul>
           {% endfor %}
         </section>
+        {% endunless %}
       </section>
     </header>
     <main>

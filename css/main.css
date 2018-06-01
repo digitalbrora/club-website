@@ -102,13 +102,13 @@ img {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  margin: -20px 0 0 95vw; }
+  margin: -16px 0 0 95vw; }
 
 .lotto-ball {
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'Stardos Stencil', cursive;
   padding: 6px;
-  margin: 2px;
+  margin: 1px;
   border-radius: 50%;
   border-color: white;
   border-width: 2px;
