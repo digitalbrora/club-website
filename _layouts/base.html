@@ -9,23 +9,22 @@
   </head>
   <body>
     <header class="site-header">
-      <img class="logo" src="/images/assets/logo.png" alt="">
-      <h1 class="site-title">{{ site.title }}</h1>
-      <h2 class="site-sub-title">Since 1878</h2>
-      <section class="lotto">
-        {% assign lotto = site.posts | where: "category", "lotto" %}
-        {% for results in lotto limit: 1 %}
-        <ul class="lotto-numbers">
-          {% for number in results.winning-numbers %}
-          <li class="lotto-balls">{{ number }}</li>
-          {% endfor %}
-        </ul>
-        {% endfor %}
+      <section class="top-bar">
+        <a href="/"><img class="logo" src="/images/assets/logo.png" alt="Club Badge"></a>
+        <nav class="top-nav">
+          <ul class="main-nav">
+            <li class="nav-item"><a href="/news/"{% if page.layout == 'news-article' or page.menu == 'news' %} class="active" {% endif %}>News</a></li>
+            <li class="nav-item"><a href="/fixtures/"{% if page.layout == 'match-preview' or page.layout == 'match-report' or page.menu == 'fixtures' %} class="active" {% endif %}>Fixtures</a></li>
+            <li class="nav-item"><a href="/squad/">Squad</a></li>
+            <li class="nav-item"><a href="/shop/">Shop</a></li>
+          </ul>
+        </nav>
       </section>
     </header>
     <main>
       <section class="main-content">
         {{ content }}
+        {{ page.layout }}
       </section>
     </main>
     <section class="additional-info">

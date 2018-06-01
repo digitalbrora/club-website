@@ -49,33 +49,11 @@ p {
   line-height: 1.25;
   margin: 1.5em 0; }
 
+a {
+  font-family: 'Roboto', sans-serif; }
+
 strong {
   font-weight: 900; }
-
-.site-title {
-  font-size: 1.5em;
-  border-bottom: 3px solid #a01a01; }
-
-.site-sub-title {
-  font-family: 'Stardos Stencil', cursive;
-  color: #a01a01;
-  border-bottom: 1px solid #a01a01; }
-
-.lotto-numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  font-family: 'Stardos Stencil', cursive; }
-
-.lotto-balls {
-  background-color: #a01a01;
-  color: white;
-  padding: 8px;
-  border: 2px solid #333;
-  border-radius: 50%; }
 
 body {
   width: 100%; }
@@ -83,41 +61,32 @@ body {
 img {
   width: 100%; }
 
-.site-header {
-  display: grid;
-  grid-template-columns: 56px repeat(4, 1fr);
-  grid-template-rows: 28px repeat(4, 1fr);
-  background-color: white; }
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 60px;
+  background-color: black; }
+  .top-bar .logo {
+    max-height: 56px;
+    width: 56px;
+    padding: 2px; }
 
-.logo {
-  grid-row-start: 1;
-  grid-row-end: 3; }
+.top-nav {
+  float: right; }
 
-.site-title {
-  grid-column-start: 2;
-  grid-column-end: -1;
-  margin-left: 1em;
-  margin-right: 1em;
-  justify-self: stretch;
-  -ms-flex-item-align: center;
-  align-self: center;
-  color: #a01a01; }
-
-.site-sub-title {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  justify-self: stretch;
-  -ms-flex-item-align: center;
-  align-self: center; }
-
-.lotto {
-  grid-column-start: 4;
-  grid-column-end: -1;
-  grid-row-start: 3; }
-
-.nav-menu {
+.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  display: flex; }
+
+.nav-item {
+  padding: 20px 0 20px 0;
+  margin: 0 8px 0 8px; }
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em; }
+
+.active {
+  border-bottom: 4px solid #fff; }
