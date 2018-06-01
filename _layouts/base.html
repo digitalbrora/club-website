@@ -9,9 +9,19 @@
   </head>
   <body>
     <header class="site-header">
-      {% include common/main-nav.html %}
-      {% include common/banner.html %}
-      {% include common/secondary-nav.html %}
+      <img class="logo" src="/images/assets/logo.png" alt="">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <h2 class="site-sub-title">Since 1878</h2>
+      <section class="lotto">
+        {% assign lotto = site.posts | where: "category", "lotto" %}
+        {% for results in lotto limit: 1 %}
+        <ul class="lotto-numbers">
+          {% for number in results.winning-numbers %}
+          <li class="lotto-balls">{{ number }}</li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </section>
     </header>
     <main>
       <section class="main-content">

@@ -1,8 +1,6 @@
 // The big overall stuff first
 body  {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
 }
 img   {
   width:100%;
@@ -11,6 +9,36 @@ img   {
 // The main site header
 .site-header  {
   display: grid;
+  grid-template-columns: 56px repeat(4, 1fr);
+  grid-template-rows: 28px repeat(4, 1fr);
+  background-color: white;
+}
+
+.logo {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.site-title {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  margin-left: 1em;
+  margin-right: 1em;
+  justify-self: stretch;
+  align-self: center;
+  color: $primary-color;
+}
+.site-sub-title {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-self: stretch;
+  align-self: center;
+}
+
+.lotto  {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 3;
 }
 
 
