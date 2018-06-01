@@ -42,7 +42,7 @@ gulp.task('images', function () {
         withoutEnlargement: false,
         errorOnUnusedConfig: false,
         withMetadata: false,
-        rename: { prefix: 'small-' },
+        rename: { suffix: '-small' },
       }, {
         width: 520,
         quality: 70,
@@ -50,7 +50,7 @@ gulp.task('images', function () {
         withoutEnlargement: false,
         errorOnUnusedConfig: false,
         withMetadata: false,
-        rename: { prefix: 'med-' },
+        rename: { suffix: '-med' },
       }, {
         width: 768,
         quality: 70,
@@ -58,7 +58,7 @@ gulp.task('images', function () {
         withoutEnlargement: false,
         errorOnUnusedConfig: false,
         withMetadata: false,
-        rename: { prefix: 'large-' },
+        rename: { suffix: '-large' },
       }, {
         width: 90,
         height: 90,
@@ -67,7 +67,7 @@ gulp.task('images', function () {
         withoutEnlargement: false,
         errorOnUnusedConfig: false,
         withMetadata: false,
-        rename: { prefix: 'thumbnail-' },
+        rename: { suffix: '-thumbnail' },
       }],
     }))
     .pipe(gulp.dest('images/articles'));
