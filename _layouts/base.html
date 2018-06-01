@@ -11,20 +11,33 @@
     <header class="site-header">
       <section class="top-bar">
         <a href="/"><img class="logo" src="/images/assets/logo.png" alt="Club Badge"></a>
+        <section class="sponsor-bar">
+          Stuff in here to include on bigger screens .... sponsors logos??
+        </section>
         <nav class="top-nav">
           <ul class="main-nav">
             <li class="nav-item"><a href="/news/"{% if page.layout == 'news-article' or page.menu == 'news' %} class="active" {% endif %}>News</a></li>
             <li class="nav-item"><a href="/fixtures/"{% if page.layout == 'match-preview' or page.layout == 'match-report' or page.menu == 'fixtures' %} class="active" {% endif %}>Fixtures</a></li>
             <li class="nav-item"><a href="/squad/">Squad</a></li>
             <li class="nav-item"><a href="/shop/">Shop</a></li>
+            <li class="nav-item"><a href="/sitemap/">...</a></li>
           </ul>
         </nav>
+        <section>
+          {% assign lotto = site.posts | where: "category", "lotto" %}
+          {% for results in lotto limit: 1 %}
+          <ul class="lotto-banner">
+            {% for number in results.winning-numbers %}
+            <li class="lotto-ball">{{ number }}</li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </section>
       </section>
     </header>
     <main>
       <section class="main-content">
         {{ content }}
-        {{ page.layout }}
       </section>
     </main>
     <section class="additional-info">

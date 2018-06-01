@@ -72,8 +72,12 @@ img {
     width: 56px;
     padding: 2px; }
 
+.sponsor-bar {
+  display: none; }
+
 .top-nav {
-  float: right; }
+  float: right;
+  margin-left: -12px; }
 
 .main-nav {
   display: -webkit-box;
@@ -90,3 +94,30 @@ img {
 
 .active {
   border-bottom: 4px solid #fff; }
+
+.lotto-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: -20px 0 0 95vw; }
+
+.lotto-ball {
+  font-size: 10px;
+  font-family: 'Stardos Stencil', cursive;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #a01a01;
+  color: white; }
+
+main {
+  margin-top: 100px; }
+
+.main-content {
+  display: grid; }

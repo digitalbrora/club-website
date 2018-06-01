@@ -6,7 +6,7 @@ img   {
   width:100%;
 }
 
-// The main site header
+// The main site header and navigation
 .top-bar  {
   position: fixed;
   top: 0;
@@ -20,8 +20,13 @@ img   {
   }
 }
 
+.sponsor-bar  {
+  display: none;
+}
+
 .top-nav  {
   float: right;
+  margin-left: -12px;
 }
 
 .main-nav {
@@ -40,4 +45,34 @@ img   {
 
 .active {
   border-bottom: 4px solid #fff;
+}
+
+.lotto-banner {
+  display: flex;
+  justify-content: flex-end;
+  margin: -20px 0 0 95vw;
+}
+
+
+.lotto-ball {
+  font-size: 10px;
+  font-family: 'Stardos Stencil', cursive;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  background-color: $primary-color;
+  color: white;
+}
+
+main  {
+  margin-top: 100px;
+}
+
+//The Main Content
+
+.main-content {
+  display: grid;
 }
