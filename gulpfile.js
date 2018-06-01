@@ -30,7 +30,7 @@ gulp.task('watch', function(){
 
 // Task for building responsive images
 
-gulp.task('article-images', function () {
+gulp.task('images', function () {
   return gulp.src('build/images/uploads/*.{png,jpg}')
     .pipe(responsive({
 
@@ -78,3 +78,8 @@ gulp.task('article-images', function () {
 gulp.task('serve', shell.task(['bundle exec jekyll serve --livereload']));
 
 gulp.task('dev', ['watch','images','serve']);
+
+// Task for building site for production:
+gulp.task('build', shell.task(['bundle exec jekyll build']));
+
+gulp.task('prod', ['images','build']);
