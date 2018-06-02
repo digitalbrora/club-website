@@ -70,12 +70,45 @@ img   {
   color: white;
 }
 
+.subheader  {
+  margin-top: 90px;
+  h1  {
+    color: $primary-color;
+    font-size: 1.3em;
+    margin-left: 5vw;
+  }
+  h2  {
+    color: $primary-color;
+    font-size: 1em;
+    font-family: 'Stardos Stencil', cursive;
+    margin-left: 10vw;
+  }
+}
+
 main  {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 //The Main Content
 
 .main-content {
   display: grid;
+  @media  (min-width: 650px)  {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.news-article {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  @media (min-width: 520px) {
+    width: 75%;
+  }
+}
+
+.title  {
+  text-align: center;
+  font-size: 1.25em;
+  padding: 1em 0;
 }
