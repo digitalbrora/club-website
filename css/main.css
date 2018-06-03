@@ -63,92 +63,78 @@ img {
 
 .top-bar {
   position: fixed;
-  top: 0;
   width: 100%;
-  max-height: 60px;
-  background-color: black; }
-  .top-bar .logo {
-    max-height: 56px;
-    width: 56px;
-    padding: 2px; }
-
-.sponsor-bar {
-  display: none; }
-
-.top-nav {
-  float: right;
-  margin-left: -12px; }
+  background-color: #333; }
 
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 46px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.banner {
+  padding-top: 46px; }
+
+.bottom-bar {
+  width: 100%;
+  background-color: #333; }
+  @media (min-width: 600px) {
+    .bottom-bar {
+      display: none; } }
+
+.secondary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 46px; }
+
+.logo {
+  width: 56px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: auto; }
 
 .nav-item {
-  padding: 20px 0 20px 0;
-  margin: 0 8px 0 8px; }
+  width: 48px;
+  margin: auto; }
   .nav-item a {
+    min-width: 48px;
     color: white;
     text-decoration: none;
-    font-size: 0.8em; }
-    @media (min-width: 360px) {
-      .nav-item a {
-        font-size: 1em; } }
+    padding: 16.1px 0; }
 
-.active {
-  border-bottom: 4px solid #fff; }
-
-.lotto-banner {
+.lotto {
+  margin-bottom: -23px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin: -16px 0 0 95vw; }
+  justify-content: flex-end; }
 
 .lotto-ball {
-  font-size: 1em;
-  font-family: 'Stardos Stencil', cursive;
-  padding: 6px;
-  margin: 1px;
+  margin-top: -11.5px;
+  min-width: 16px;
+  text-align: center;
+  padding: 8px;
   border-radius: 50%;
   border-color: white;
   border-width: 2px;
   border-style: solid;
+  color: white;
   background-color: #a01a01;
-  color: white; }
+  font-family: "Stardos Stencil", cursive;
+  font-size: 14px; }
 
-.subheader {
-  margin-top: 90px; }
-  .subheader h1 {
-    color: #a01a01;
-    font-size: 1.3em;
-    margin-left: 5vw; }
-  .subheader h2 {
-    color: #a01a01;
-    font-size: 1em;
-    font-family: 'Stardos Stencil', cursive;
-    margin-left: 10vw; }
+.on-large {
+  display: none; }
+  @media (min-width: 600px) {
+    .on-large {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 main {
-  margin-top: 10px; }
-
-.main-content {
-  display: grid; }
-  @media (min-width: 650px) {
-    .main-content {
-      grid-template-columns: 3fr 2fr; } }
-
-.news-article {
-  width: 95%;
-  margin: 0 auto;
-  display: grid; }
-  @media (min-width: 520px) {
-    .news-article {
-      width: 75%; } }
-
-.title {
-  text-align: center;
-  font-size: 1.25em;
-  padding: 1em 0; }
+  margin-top: 46px; }

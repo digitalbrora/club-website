@@ -8,38 +8,43 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500i,900|Stardos+Stencil:700" rel="stylesheet">
   </head>
   <body>
-    <header class="site-header">
+    <header>
       <section class="top-bar">
-        <a href="/"><img class="logo" src="/images/assets/logo.png" alt="Club Badge"></a>
-        <section class="sponsor-bar">
-          Stuff in here to include on bigger screens .... sponsors logos??
-        </section>
-        <nav class="top-nav">
+        <nav>
           <ul class="main-nav">
-            <li class="nav-item"><a href="/news/"{% if page.layout == 'news-article' or page.menu == 'news' %} class="active" {% endif %}>News</a></li>
-            <li class="nav-item"><a href="/fixtures/"{% if page.layout == 'match-preview' or page.layout == 'match-report' or page.menu == 'fixtures' %} class="active" {% endif %}>Fixtures</a></li>
-            <li class="nav-item"><a href="/squad/">Squad</a></li>
+            <li class="logo"><a href="/"><img src="/images/assets/logo.png" alt="Brora Rangers badge"></a></li>
+            <li class="nav-item"><a href="/news/">News</a></li>
+            <li class="nav-item"><a href="/fixtures/">Fixtures</a></li>
             <li class="nav-item"><a href="/shop/">Shop</a></li>
-            <li class="nav-item"><a href="/sitemap/">...</a></li>
+            <li class="nav-item on-large"><a href="/club/">Club</a></li>
+            <li class="nav-item on-large"><a href="/squad/">Squad</a></li>
+            <li class="nav-item on-large"><a href="/sponsor/">Sponsor</a></li>
+            <li class="logo on-large"><a href="/"><img src="/images/assets/Rae-Energy.png" alt="Rae Energy logo"></a></li>
           </ul>
         </nav>
-        {% unless page.menu == 'lotto' %}
-        <section>
+        <div class="">
           {% assign lotto = site.posts | where: "category", "lotto" %}
           {% for results in lotto limit: 1 %}
-          <ul class="lotto-banner">
+          <ul class="lotto">
             {% for number in results.winning-numbers %}
             <li class="lotto-ball">{{ number }}</li>
             {% endfor %}
-            <li class="lotto-ball nav-item"><a href="/lotto/">...</a></li>
           </ul>
           {% endfor %}
-        </section>
-        {% endunless %}
+        </div>
       </section>
-      <section class="subheader">
-        <h1>{{ site.title }}</h1>
-        <h2>SINCE 1878</h2>
+      <section class="banner">
+        banner
+      </section>
+      <section class="bottom-bar">
+        <nav>
+          <ul class="secondary-nav">
+            <li class="nav-item"><a href="/club/">Club</a></li>
+            <li class="nav-item"><a href="/squad/">Squad</a></li>
+            <li class="nav-item"><a href="/sponsor/">Sponsor</a></li>
+            <li class="logo"><a href="/"><img src="/images/assets/Rae-Energy.png" alt="Rae Energy logo"></a></li>
+          </ul>
+        </nav>
       </section>
     </header>
     <main>
