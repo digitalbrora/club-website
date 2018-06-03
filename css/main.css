@@ -44,22 +44,31 @@ table {
 h1 {
   font-family: 'Stardos Stencil', cursive; }
 
+.title {
+  font-size: 2em;
+  justify-self: center;
+  padding: 1em 0 1em 1em; }
+
 p {
   font-family: 'Roboto', sans-serif;
   line-height: 1.25;
   margin: 1.5em 0; }
 
 a {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #a01a01; }
 
-strong {
-  font-weight: 900; }
+.excerpt {
+  font-weight: 900;
+  font-size: 1.2em; }
 
 body {
   width: 100%; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 .top-bar {
   position: fixed;
@@ -157,7 +166,11 @@ main {
       grid-template-areas: "main main main sidebar" "footer footer footer footer"; } }
 
 .main-header {
+  display: grid;
   width: 100%; }
+  .main-header img {
+    max-height: 16em;
+    justify-self: center; }
 
 .news-article {
   width: 95%;

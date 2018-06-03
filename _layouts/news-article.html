@@ -4,13 +4,13 @@ layout: base
 <header class="main-header">
   <h1 class="title">{{ page.title | upcase }}</h1>
     {% if page.feature-image %}
-  <img class="feature-img" src="{{ page.feature-image | replace: '.', '-large.' }}" alt="">
+  <img class="feature-img" src="{{ page.feature-image | replace: '.', '-small.' }}" alt="">
     {% else %}
   <img src="/build/images/uploads/image-placeholder.png" alt="">
     {% endif %}
 </header>
 <section class="news-article">
-  <p class="excerpt"><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
+  <p class="excerpt">{{ page.excerpt | strip_html | strip_newlines }}</p>
   <section class="article-body">
     {{ content | remove: page.excerpt }}
   </section>

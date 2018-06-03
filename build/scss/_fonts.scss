@@ -2,16 +2,27 @@ h1  {
   font-family: 'Stardos Stencil', cursive;
 }
 
+.title  {
+  font-size: 2em;
+  justify-self: center;
+  padding: 1em 0 1em 1em;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
+  //font-size: 1.2em;
   line-height: 1.25;
   margin: 1.5em 0;
 }
 
 a {
   font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: $primary-color;
 }
 
-strong  {
+.excerpt  {
   font-weight: 900;
+  font-size: 1.2em;
 }
