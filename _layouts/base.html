@@ -34,7 +34,8 @@
         </div>
       </section>
       <section class="banner">
-        banner
+        <h1>Brora Rangers FC</h1>
+        <h2>Since 1878</h2>
       </section>
       <section class="bottom-bar">
         <nav>
@@ -48,17 +49,17 @@
       </section>
     </header>
     <main>
-      <section class="main-content">
+      <article class="main-content">
         {{ content }}
+      </article>
+      <section class="additional-info">
+        <p>A sidebar with extra site-wide info</p>
       </section>
+      <footer class="site-footer">
+        <p>This is the main site footer</p>
+        {% include common/sponsor-area.html %}
+      </footer>
     </main>
-    <section class="additional-info">
-      <p>A sidebar with extra site-wide info</p>
-    </section>
-    <footer class="site-footer">
-      <p>This is the main site footer</p>
-      {% include common/sponsor-area.html %}
-    </footer>
   </body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </html>

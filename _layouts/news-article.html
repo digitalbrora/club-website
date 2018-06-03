@@ -1,31 +1,26 @@
 ---
 layout: base
 ---
-<article>
-  <header class="news-header">
-    <h1 class="title">{{ page.title | upcase }}</h1>
+<header class="main-header">
+  <h1 class="title">{{ page.title | upcase }}</h1>
     {% if page.feature-image %}
-    <img class="feature-img" src="{{ page.feature-image | replace: '.', '-small.' }}" alt="">
+  <img class="feature-img" src="{{ page.feature-image | replace: '.', '-large.' }}" alt="">
     {% else %}
-    <img src="/build/images/uploads/image-placeholder.png" alt="">
+  <img src="/build/images/uploads/image-placeholder.png" alt="">
     {% endif %}
-  </header>
-  <section class="news-article">
-    <p class="excerpt"><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
-    <section class="article-body">
-      {{ content | remove: page.excerpt }}
-    </section>
-    <aside class="">
-
-    </aside>
-    <footer class="meta-info">
-      <p>It was written on {{ page.date }}</p>
-      <p>This is posted under {{ page.category }}</p>
-      <p>It mentions {{ page.tags }}</p>
-      <p>It can be linked to an event on {{ page.linked-date }}</p>
-    </footer>
+</header>
+<section class="news-article">
+  <p class="excerpt"><strong>{{ page.excerpt | strip_html | strip_newlines }}</strong></p>
+  <section class="article-body">
+    {{ content | remove: page.excerpt }}
   </section>
-</article>
-<aside class="">
+  <aside class="">
 
-</aside>
+  </aside>
+  <footer class="meta-info">
+    <p>It was written on {{ page.date }}</p>
+    <p>This is posted under {{ page.category }}</p>
+    <p>It mentions {{ page.tags }}</p>
+    <p>It can be linked to an event on {{ page.linked-date }}</p>
+  </footer>
+</section>

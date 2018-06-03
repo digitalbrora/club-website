@@ -19,7 +19,8 @@ img   {
 }
 
 .banner {
-  padding-top: $top-bar;
+  padding-top: $top-bar*1.5;
+  text-align: center;
 }
 
 .bottom-bar  {
@@ -80,6 +81,30 @@ img   {
   }
 }
 
+.main-content {
+  grid-area: main;
+  display: grid;
+}
+
+.additional-info  {
+  grid-area: sidebar;
+}
+
+.site-footer  {
+  grid-area: footer;
+}
+
 main  {
-  margin-top: $top-bar;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "main main main main"
+    "sidebar sidebar sidebar sidebar"
+    "footer footer footer footer";
+    @media (min-width: $mobile-nav) {
+      grid-template-areas:
+        "main main main sidebar"
+        "footer footer footer footer";
+    }
 }
