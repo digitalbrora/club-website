@@ -155,3 +155,10 @@ main {
   @media (min-width: 600px) {
     main {
       grid-template-areas: "main main main sidebar" "footer footer footer footer"; } }
+
+.main-header {
+  width: 100%; }
+
+.news-article {
+  width: 95%;
+  justify-self: center; }
