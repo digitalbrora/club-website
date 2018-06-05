@@ -7,6 +7,7 @@ news-category: Event News
 linked-date: ''
 tags:
   - Steven Mackay
+  - Ranald Mackay
 feature-image: /images/articles/thumbnail_image1.jpg
 img-alt: >-
   Brora Rangers feature on the big screen at Hampden ahead of the Scottish Cup

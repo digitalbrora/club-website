@@ -47,7 +47,7 @@ h1 {
 .title {
   font-size: 2em;
   justify-self: center;
-  padding: 1em 0 1em 1em; }
+  padding: 1em 0 1em 0.6em; }
 
 p {
   font-family: 'Roboto', sans-serif;
@@ -64,11 +64,37 @@ a {
   font-weight: 900;
   font-size: 1.2em; }
 
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.25em; }
+
+.lead-article {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.secondary-articles {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.secondary-article {
+  grid-column-start: auto; }
+
 body {
   width: 100%; }
 
 img {
   max-width: 100%; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; }
 
 .top-bar {
   position: fixed;
@@ -76,16 +102,18 @@ img {
   background-color: #333; }
 
 .main-nav {
+  height: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 46px;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
 .banner {
+  display: grid;
   padding-top: 69px;
-  text-align: center; }
+  justify-items: center; }
 
 .bottom-bar {
   width: 100%;
@@ -98,7 +126,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 46px; }
+  height: 46px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
 .logo {
   width: 56px;
@@ -107,7 +138,7 @@ img {
   margin: auto; }
 
 .nav-item {
-  width: 48px;
+  min-width: 48px;
   margin: auto; }
   .nav-item a {
     min-width: 48px;
@@ -116,16 +147,19 @@ img {
     padding: 16.1px 0; }
 
 .lotto {
-  margin-bottom: -23px;
+  margin-bottom: -29.9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media (min-width: 600px) {
+    .lotto {
+      margin-right: 5vw; } }
 
 .lotto-ball {
-  margin-top: -11.5px;
+  margin-top: -6.9px;
   min-width: 16px;
   text-align: center;
   padding: 8px;
@@ -145,33 +179,3 @@ img {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
-
-.main-content {
-  grid-area: main;
-  display: grid; }
-
-.additional-info {
-  grid-area: sidebar; }
-
-.site-footer {
-  grid-area: footer; }
-
-main {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "main main main main" "sidebar sidebar sidebar sidebar" "footer footer footer footer"; }
-  @media (min-width: 600px) {
-    main {
-      grid-template-areas: "main main main sidebar" "footer footer footer footer"; } }
-
-.main-header {
-  display: grid;
-  width: 100%; }
-  .main-header img {
-    max-height: 16em;
-    justify-self: center; }
-
-.news-article {
-  width: 95%;
-  justify-self: center; }

@@ -1,1 +1,24 @@
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.25em;
+}
 
+.lead-article {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.secondary-articles {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.secondary-article {
+  grid-column-start: auto;
+}

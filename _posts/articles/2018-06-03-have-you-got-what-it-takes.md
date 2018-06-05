@@ -6,7 +6,7 @@ category: news
 news-category: Boardroom News
 linked-date: ''
 tags:
-  - ''
+  - Ranald Mackay
 feature-image: /images/articles/job-vacancy.jpg
 img-alt: Job vacancy note
 description: An exciting job opportunity has arisen with Brora Rangers

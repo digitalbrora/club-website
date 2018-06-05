@@ -1,19 +1,27 @@
 ---
 layout: base
 ---
-<h1>This is the home page</h1>
-
-<p>It will be built last</p>
-
-<h2>Latest News</h2>
-{% assign latest-news = site.posts %}
-  <ul>
-{% for post in latest-news limit: 5 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-  </ul>
+<section class="article-list">
+  <article class="lead-article">
+  {% for post in site.posts limit: 1 %}
+    <a href="{{ post.url }}">
+      <img src="{{ post.feature-image | replace: '.', '-small.' }}" alt="{{ post.title }}">
+    </a>
+    <h1>{{ post.title }}</h1>
+    <p>{{post.excerpt | strip_html}}</p>
+  {% endfor %}
+  </article>
+  <article class="secondary-articles">
+  {% for post in site.posts limit: 10 offset: 1 %}
+    <div class="secondary-article">
+      <a href="{{ post.url }}">
+        <img src="{{ post.feature-image | replace: '.', '-small.' }}" alt="{{ post.title }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+    </div>
+  {% endfor %}
+  </article>
+</section>
 
 <h2>Next Game</h2>
 {% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}

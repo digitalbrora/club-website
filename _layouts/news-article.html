@@ -14,13 +14,21 @@ layout: base
   <section class="article-body">
     {{ content | remove: page.excerpt }}
   </section>
-  <aside class="">
-
-  </aside>
   <footer class="meta-info">
-    <p>It was written on {{ page.date }}</p>
-    <p>This is posted under {{ page.category }}</p>
+    <p>It was written on {{ page.date | date: '%A, %B %e, %Y' }}</p>
     <p>It mentions {{ page.tags }}</p>
     <p>It can be linked to an event on {{ page.linked-date }}</p>
   </footer>
+  <aside class="article-additional-info">
+    {% capture topic %}{{ page.category }}{% endcapture %}
+    <h2>Other {{ topic}} Articles</h2>
+    <ul>
+      {% for post in site.categories[topic] limit:4 %}
+      {% unless post.title == page.title %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  </aside>
+
 </section>

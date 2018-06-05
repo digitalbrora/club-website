@@ -36,7 +36,7 @@ gulp.task('images', function () {
 
       // Resize all post images and ensure jpeg format
       '*': [{
-        width: 425,
+        height: 200,
         quality: 80,
         progressive: true,
         withoutEnlargement: false,

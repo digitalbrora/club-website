@@ -5,6 +5,8 @@ date: '2018-05-17T00:00:00+01:00'
 category: news
 news-category: Event News
 linked-date: ''
+tags:
+  - Steven Mackay
 feature-image: /images/articles/disco-night.jpg
 img-alt: Neon disco dancers
 description: 'Let''s not beat about the Kate Bush, this is the night you don''t want to miss'
