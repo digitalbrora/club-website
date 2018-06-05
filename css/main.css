@@ -74,7 +74,9 @@ a {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
-  grid-row-end: 2; }
+  grid-row-end: 2;
+  width: 96%;
+  margin: auto; }
 
 .secondary-articles {
   grid-column-start: 1;
