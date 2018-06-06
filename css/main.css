@@ -67,7 +67,7 @@ a {
 .article-list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 0.25em; }
 
 .lead-article {
@@ -77,6 +77,8 @@ a {
   grid-row-end: 2;
   width: 96%;
   margin: auto; }
+  .lead-article img {
+    max-height: 200px; }
 
 .secondary-articles {
   grid-column-start: 1;
@@ -86,6 +88,8 @@ a {
 
 .secondary-article {
   grid-column-start: auto; }
+  .secondary-article a, .secondary-article img {
+    max-height: 100px; }
 
 body {
   width: 100%; }

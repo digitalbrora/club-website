@@ -1,7 +1,7 @@
 .article-list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 0.25em;
 }
 
@@ -12,6 +12,9 @@
   grid-row-end: 2;
   width: 96%;
   margin: auto;
+  img {
+    max-height: 200px;
+  }
 }
 
 .secondary-articles {
@@ -23,4 +26,7 @@
 
 .secondary-article {
   grid-column-start: auto;
+  a, img {
+    max-height: 100px;
+  }
 }
