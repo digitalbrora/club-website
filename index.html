@@ -1,25 +1,31 @@
 ---
 layout: base
 ---
-<section class="article-list">
-  <article class="lead-article">
+
+  <article class="lead-content">
   {% for post in site.posts limit: 1 %}
-    <a href="{{ post.url }}">
-      <img src="{{ post.feature-image | replace: '.', '-large.' }}" alt="{{ post.title }}">
-    </a>
-    <div class="">
+    <div class="lead-content-block">
       <a href="{{ post.url }}">
-        <h1>{{ post.title }}</h1>
+        <img src="{{ post.feature-image | replace: '.', '-large.' }}" alt="{{ post.title }}">
+      </a>
+    </div>
+    <div class="lead-content-block">
+      <a href="{{ post.url }}">
+        <h1 class="title">{{ post.title }}</h1>
       </a>
       <p>{{post.excerpt | strip_html}}</p>
     </div>
   {% endfor %}
   </article>
-  <article class="secondary-articles">
+  <article class="secondary-content">
   {% for post in site.posts limit: 6 offset: 1 %}
-    <div class="secondary-article">
+    <div class="secondary-content-block">
       <a href="{{ post.url }}">
+        {% if post.feature-image %}
         <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
+        {% else %}
+        <img src="http://via.placeholder.com/135x90" alt="{{ post.title }}">
+        {% endif %}
       </a>
       <a href="{{ post.url }}">
         <h1>{{ post.title }}</h1>
@@ -27,9 +33,26 @@ layout: base
     </div>
   {% endfor %}
   </article>
-</section>
+  <article class="secondary-content large-only">
+  {% for post in site.posts limit: 6 offset: 7 %}
+    <div class="secondary-content-block">
+      <a href="{{ post.url }}">
+        {% if post.feature-image %}
+        <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
+        {% else %}
+        <img src="http://via.placeholder.com/135x90" alt="{{ post.title }}">
+        {% endif %}
+      </a>
+      <a href="{{ post.url }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+    </div>
+  {% endfor %}
+  </article>
 
 <h2>Next Game</h2>
+
+
 {% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}
   <ul>
 {% for match in outstanding limit: 1 %}

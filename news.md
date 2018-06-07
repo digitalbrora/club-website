@@ -5,16 +5,30 @@
 layout: base
 menu: news
 ---
-<h1>This is the news page</h1>
-
-<p>This will include a list of all the latest news articles</p>
-
-<ul>
-{% for post in site.posts %}
-
-<li>
-<a href="{{ post.url }}">{{ post.title }}</a>
-</li>
-
-{% endfor %}
-<ul>
+<section class="article-list">
+  <article class="lead-article">
+  {% for post in site.posts limit: 1 %}
+    <a href="{{ post.url }}">
+      <img src="{{ post.feature-image | replace: '.', '-large.' }}" alt="{{ post.title }}">
+    </a>
+    <div class="">
+      <a href="{{ post.url }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+      <p>{{post.excerpt | strip_html}}</p>
+    </div>
+  {% endfor %}
+  </article>
+  <article class="secondary-articles">
+  {% for post in site.posts limit: 6 offset: 1 %}
+    <div class="secondary-article">
+      <a href="{{ post.url }}">
+        <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
+      </a>
+      <a href="{{ post.url }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+    </div>
+  {% endfor %}
+  </article>
+</section>

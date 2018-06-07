@@ -6,8 +6,9 @@ img   {
   max-width:100%;
 }
 
-main  {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+.large-only {
+  visibility: collapse;
+  @media  (min-width: 500px)  {
+    visibility: visible;
+  }
 }
