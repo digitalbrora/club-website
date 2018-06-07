@@ -33,22 +33,6 @@ layout: base
     </div>
   {% endfor %}
   </article>
-  <article class="secondary-content large-only">
-  {% for post in site.posts limit: 6 offset: 7 %}
-    <div class="secondary-content-block">
-      <a href="{{ post.url }}">
-        {% if post.feature-image %}
-        <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
-        {% else %}
-        <img src="http://via.placeholder.com/135x90" alt="{{ post.title }}">
-        {% endif %}
-      </a>
-      <a href="{{ post.url }}">
-        <h1>{{ post.title }}</h1>
-      </a>
-    </div>
-  {% endfor %}
-  </article>
 
 <h2>Next Game</h2>
 

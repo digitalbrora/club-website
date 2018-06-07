@@ -101,11 +101,6 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media (min-width: 500px) {
-    .secondary-content {
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
 
 .secondary-content-block {
   -webkit-box-flex: 0;
@@ -114,19 +109,14 @@ a {
   -ms-flex-preferred-size: 150px;
   flex-basis: 150px;
   -ms-flex-item-align: start;
-  align-self: flex-start; }
+  align-self: flex-start;
+  margin-bottom: 20px; }
 
 body {
   width: 100%; }
 
 img {
   max-width: 100%; }
-
-.large-only {
-  visibility: collapse; }
-  @media (min-width: 500px) {
-    .large-only {
-      visibility: visible; } }
 
 .top-bar {
   position: fixed;

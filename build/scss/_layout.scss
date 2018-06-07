@@ -5,10 +5,3 @@ body  {
 img   {
   max-width:100%;
 }
-
-.large-only {
-  visibility: collapse;
-  @media  (min-width: 500px)  {
-    visibility: visible;
-  }
-}

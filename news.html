@@ -1,0 +1,21 @@
+---
+layout: base
+menu: news
+---
+<article class="secondary-content">
+{% for post in site.posts limit: 6 offset: 1 %}
+  <div class="secondary-content-block">
+    <a href="{{ post.url }}">
+      {% if post.feature-image %}
+      <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
+      {% else %}
+      <img src="http://via.placeholder.com/135x90" alt="{{ post.title }}">
+      {% endif %}
+    </a>
+    <a href="{{ post.url }}">
+      <h1>{{ post.title }}</h1>
+    </a>
+    <p>{{post.excerpt | strip_html | truncate: 60 }}</p>
+  </div>
+{% endfor %}
+</article>
