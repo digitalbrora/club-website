@@ -9,3 +9,8 @@ fixtures:
     date: '2018-08-04'
     home-team: Forres Mechanics
     kickoff: '15:00'
+  - away-team: Clachnacuddin
+    competition: League
+    date: '2018-08-08'
+    home-team: Brora Rangersa
+    kickoff: '20:00'
