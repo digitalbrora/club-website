@@ -5,17 +5,23 @@ layout: base
   <article class="lead-article">
   {% for post in site.posts limit: 1 %}
     <a href="{{ post.url }}">
-      <img src="{{ post.feature-image | replace: '.', '-small.' }}" alt="{{ post.title }}">
+      <img src="{{ post.feature-image | replace: '.', '-large.' }}" alt="{{ post.title }}">
     </a>
-    <h1>{{ post.title }}</h1>
-    <p>{{post.excerpt | strip_html}}</p>
+    <div class="">
+      <a href="{{ post.url }}">
+        <h1>{{ post.title }}</h1>
+      </a>
+      <p>{{post.excerpt | strip_html}}</p>
+    </div>
   {% endfor %}
   </article>
   <article class="secondary-articles">
-  {% for post in site.posts limit: 10 offset: 1 %}
+  {% for post in site.posts limit: 6 offset: 1 %}
     <div class="secondary-article">
       <a href="{{ post.url }}">
-        <img src="{{ post.feature-image | replace: '.', '-small.' }}" alt="{{ post.title }}">
+        <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
+      </a>
+      <a href="{{ post.url }}">
         <h1>{{ post.title }}</h1>
       </a>
     </div>

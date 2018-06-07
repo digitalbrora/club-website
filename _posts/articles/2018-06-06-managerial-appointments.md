@@ -30,8 +30,6 @@ Steven Mackay will take up his role as 1st team manager and Craig will support h
 
 "Ross Tokely delivered to the club much success and we have in Steven and Craig the ideal personnel to take this forward and challenge for league honours next season. We enjoyed an extended run in the Scottish Cup this year, but we were well off the pace on league duties, and I know we are a far better team than that."
 
-{% include article-image.html image="1" float="right" %}
-
 *Steven Mackay had this to say on his new role:*
 
 "I am incredibly excited and honoured to be appointed manager of Brora Rangers FC. I want to thank the Chairman and the board for having the belief and confidence to select an inexperienced manager. I am sure there were more experienced candidates available therefore I feel very privileged to be in this position. Although I am not officially retiring from playing, I do understand the challenges that I face by combining playing and managing and will take a balanced view on both during the coming weeks and months and will always base my decisions on what is best for Brora Rangers."
@@ -45,9 +43,6 @@ Steven Mackay will take up his role as 1st team manager and Craig will support h
 "My ambition is very clear, I want to create an environment where players have the freedom to express themselves but always give 100% to the club. I have been fortunate enough to captain Brora Rangers during the most successful period in its history and I want the club to get back to that level of performance and achievement."
 
 "The players and management team need to re-engage the relationship with the supporters. They are the life and soul of the football club and the players feed off their energy. I would love to see an increase in the number of supporters that attend both home and away games as they certainly add enhanced motivation for the players. I know the Chairman is planning to organise an open meeting for all the supporters once the full management team are in place and we will look forward to taking our place on that forum."
-
-
-{% include article-image.html image="2" float="left" %}
 
 *Whilst Craig Campbell added:*
 

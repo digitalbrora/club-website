@@ -60,7 +60,7 @@ gulp.task('images', function () {
         withMetadata: false,
         rename: { suffix: '-large' },
       }, {
-        width: 90,
+        width: 135,
         height: 90,
         quality: 90,
         progressive: true,
