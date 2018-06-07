@@ -37,19 +37,16 @@ layout: base
 <h2>Next Game</h2>
 
 
-{% assign outstanding = site.fixtures | where: 'status', 'outstanding' | sort: 'match-date' %}
-  <ul>
-{% for match in outstanding limit: 1 %}
-    <li>{{ match.match-date }} - {{ match.home-team }} v {{ match.away-team }} - {{ match.status }}</li>
-
-    {% assign previews = site.posts | where: 'category', 'preview' %}
-    {% for fixture in previews %}
-    {% if match.match-date == fixture.match-date %}
-    <a href="{{ fixture.url }}">Read the match preview</a>
-    {% endif %}
-    {% endfor %}
+{% assign outstanding = site.data.fixtures %}
+{% for match in outstanding.fixtures %}
+<ul>
+  <li>{{ match.date }}</li>
+  <li>{{ match.home-team }} -v- {{ match.away-team }}</li>
+  <li>{{ match.competition }}</li>
+  <br>
+</ul>
 {% endfor %}
-  </ul>
+
 
   <h2>Latest Result</h2>
   {% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
