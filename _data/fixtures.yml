@@ -14,3 +14,8 @@ fixtures:
     date: '2018-08-08'
     home-team: Brora Rangersa
     kickoff: '20:00'
+  - away-team: Brora Rangers
+    competition: League
+    date: '2018-08-11'
+    home-team: Fraserburgh
+    kickoff: '15:00'
