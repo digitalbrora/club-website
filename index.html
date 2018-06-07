@@ -34,11 +34,13 @@ layout: base
   {% endfor %}
   </article>
 
-<h2>Next Game</h2>
+  <hr>
+
+<h1>Next Game</h1>
 
 
 {% assign outstanding = site.data.fixtures %}
-{% for match in outstanding.fixtures %}
+{% for match in outstanding.fixtures limit: 1 %}
 <ul>
   <li>{{ match.date }}</li>
   <li>{{ match.home-team }} -v- {{ match.away-team }}</li>
@@ -47,31 +49,23 @@ layout: base
 </ul>
 {% endfor %}
 
+<hr>
 
-  <h2>Latest Result</h2>
-  {% assign completed = site.fixtures | where: 'status', 'completed' | sort: 'match-date' %}
-    <ul>
-  {% for match in completed limit: 1 %}
-      <li>{{ match.match-date }} - {{ match.home-team }} {{ match.home-team-score }}-{{ match.away-team-score }} {{ match.away-team }} - {{ match.status }}</li>
-
-      {% assign report = site.posts | where: 'category', 'report' %}
-      {% for fixture in report %}
-      {% if match.match-date == fixture.match-date %}
-      <a href="{{ fixture.url }}">Read the match report</a>
-      {% endif %}
-      {% endfor %}
-  {% endfor %}
-    </ul>
-
-<h2>Cattachs Lotto</h2>
+<h1>Cattachs Lotto</h1>
 {% assign lotto = site.posts | where: "category", "lotto" %}
 
 {% for results in lotto limit: 1 %}
-<span>{{ results.draw-date }} -- {{ results.first-lotto-number }} - {{ results.second-lotto-number }} - {{ results.third-lotto-number }} - {{ results.fourth-lotto-number }} - {{ results.fifth-lotto-number }}</span>
+<ul>
+  {% for number in results.winning-numbers %}
+  <li>{{ number }}</li>
+  {% endfor %}
+</ul>
 <p>Next week's Bonus £{{ results.bonus }}</p>
 <p>Next week's Jackpot £{{ results.jackpot }}</p>
 {{ results.excerpt }}
 {% endfor %}
+
+<hr>
 
 <h2>Sponsors Spotlight</h2>
 <p>A section highlight one of our sponsors ... linked to a Sponsors page</p>
