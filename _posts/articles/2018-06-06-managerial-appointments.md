@@ -13,8 +13,7 @@ img-alt: >-
   William Powrie flanked by new manager, Steven Mackay, and new coach, Craig
   Campbell
 description: >-
-  Brora Rangers are delighted to announce the appointments of both Steven Mackay
-  and Craig Campbell to their management team.
+  Brora Rangers are delighted to announce new appointments
 ---
 Brora Rangers are delighted to announce the appointments of both Steven Mackay and Craig Campbell to their management team and they will take up their positions with immediate effect.
 

@@ -32,7 +32,59 @@
 
 .secondary-content-block  {
   flex-grow: 0;
-  flex-basis: 150px;
+  flex-basis: 140px;
   align-self: flex-start;
-  margin-bottom: 20px;
+  margin: 10px 10px;
+}
+
+.fixture-block  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-half  {
+  flex-basis: 35%;
+  text-align: center;
+  min-height: 200px;
+  background-color: $primary-color;
+  color: white;
+  flex-shrink: 2;
+}
+
+.away-half  {
+  flex-basis: 35%;
+  text-align: center;
+  min-height: 200px;
+  background-color: $secondary-color;
+  color: white;
+  flex-shrink: 2;
+}
+
+.divider {
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right,$primary-color 50%, $secondary-color 50%);
+  color: white;
+  flex-shrink: 1;
+  .lotto-ball {
+    margin: 30% 0;
+    padding: 10px;
+    font-size: 2em;
+  }
+}
+
+.lotto-large  {
+  display: flex;
+  width: 100%;
+  justify-content: center !important;
+  .lotto-ball {
+    margin: 10px 5px;
+    padding: 12px;
+    font-size: 1.2em;
+    border-color: $secondary-color;
+  }
 }

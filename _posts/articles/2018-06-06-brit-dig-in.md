@@ -8,7 +8,7 @@ linked-date: ''
 feature-image: /images/articles/brit-dig-in.jpg
 img-alt: New safety netting work gets underway at Dudgeon Park
 description: >-
-  The members of Brora Rangers Improvement Trust get their first project
+  Brora Rangers Improvement Trust get their first project
   underway
 ---
 As our new manager prepares for the season ahead, our supporter led Brora Rangers Improvement Trust have broken the turf on their first self funded project.

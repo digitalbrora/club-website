@@ -1,7 +1,6 @@
 ---
 layout: base
 ---
-
   <article class="lead-content">
   {% for post in site.posts limit: 1 %}
     <div class="lead-content-block">
@@ -17,7 +16,7 @@ layout: base
     </div>
   {% endfor %}
   </article>
-  <article class="secondary-content">
+  <section class="secondary-content">
   {% for post in site.posts limit: 6 offset: 1 %}
     <div class="secondary-content-block">
       <a href="{{ post.url }}">
@@ -30,34 +29,36 @@ layout: base
       <a href="{{ post.url }}">
         <h1>{{ post.title }}</h1>
       </a>
+      {{ post.description }}
     </div>
   {% endfor %}
-  </article>
+</section>
 
   <hr>
+<section>
+  {% assign outstanding = site.data.fixtures %}
+  {% for match in outstanding.fixtures limit: 1 %}
+  <div  class="fixture-block">
+    <div class="home-half">
+      <p>{{ match.home-team | upcase }}</p>
+    </div>
+    <div class="divider">
+      <p class="lotto-ball">VS</p>
+      <p>{{ match.date | date: "%e %b, '%y" }}</p>
+    </div>
+    <div class="away-half">
+      <p>{{ match.away-team | upcase }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
 
-<h1>Next Game</h1>
-
-
-{% assign outstanding = site.data.fixtures %}
-{% for match in outstanding.fixtures limit: 1 %}
-<ul>
-  <li>{{ match.date }}</li>
-  <li>{{ match.home-team }} -v- {{ match.away-team }}</li>
-  <li>{{ match.competition }}</li>
-  <br>
-</ul>
-{% endfor %}
-
-<hr>
-
-<h1>Cattachs Lotto</h1>
 {% assign lotto = site.posts | where: "category", "lotto" %}
 
 {% for results in lotto limit: 1 %}
-<ul>
+<ul class="lotto lotto-large">
   {% for number in results.winning-numbers %}
-  <li>{{ number }}</li>
+  <li class="lotto-ball">{{ number }}</li>
   {% endfor %}
 </ul>
 <p>Next week's Bonus £{{ results.bonus }}</p>

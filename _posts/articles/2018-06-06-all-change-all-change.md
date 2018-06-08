@@ -15,8 +15,7 @@ tags:
 feature-image: /images/articles/all-change.jpg
 img-alt: A Guard waves a train off from the station
 description: >-
-  We say goodbye to some well-known faces around Dudgeon Park as Steven Mackay
-  begins to formulate his plans for next season
+  We say goodbye to some well-known faces around Dudgeon Park
 ---
 We may have just entered the closed season but work behind the scenes does not stop and our new manager has been busy casting his eye over the squad and around and about, as he begins to formulate his playing plans for next season.
 
