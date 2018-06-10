@@ -134,6 +134,10 @@ a {
   color: white;
   -ms-flex-negative: 2;
   flex-shrink: 2; }
+  .home-half img {
+    padding-top: 10px; }
+  .home-half p {
+    font-family: 'Stardos Stencil', cursive; }
 
 .away-half {
   -ms-flex-preferred-size: 35%;
@@ -144,6 +148,10 @@ a {
   color: white;
   -ms-flex-negative: 2;
   flex-shrink: 2; }
+  .away-half img {
+    padding-top: 10px; }
+  .away-half p {
+    font-family: 'Stardos Stencil', cursive; }
 
 .divider {
   display: -webkit-box;
@@ -186,6 +194,10 @@ body {
 
 img {
   max-width: 100%; }
+
+.remove-margin {
+  margin: 0 -10px;
+  z-index: 5; }
 
 .top-bar {
   position: fixed;

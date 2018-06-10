@@ -5,3 +5,8 @@ body  {
 img   {
   max-width:100%;
 }
+
+.remove-margin {
+  margin: 0 -10px;
+  z-index: 5;
+}

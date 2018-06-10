@@ -40,14 +40,21 @@ layout: base
   {% for match in outstanding.fixtures limit: 1 %}
   <div  class="fixture-block">
     <div class="home-half">
+      <img src="/images/articles/{{ match.home-team | replace: " ", "-" | downcase }}-small.png" alt="" width="90px;">
       <p>{{ match.home-team | upcase }}</p>
     </div>
     <div class="divider">
       <p class="lotto-ball">VS</p>
-      <p><datetime="{{match.date}}">{{ match.date | date: "%e %b, '%y" }}</datetime></p>
-      <time>{{ match.kickoff }}</time>
+      <p class="remove-margin"><datetime="{{match.date}}">{{ match.date | date: "%e %b, '%y" }}</datetime></p>
+      <p class="remove-margin"><time>{{ match.kickoff }}</time></p>
+      {% for club in site.clubs %}
+      {% if match.home-team == club.title %}
+      <p class="remove-margin">{{ club.ground }}</p>
+      {% endif %}
+      {% endfor %}
     </div>
     <div class="away-half">
+      <img src="/images/articles/{{ match.away-team | replace: " ", "-" | downcase }}-small.png" alt="" width="90px;">
       <p>{{ match.away-team | upcase }}</p>
     </div>
   </div>

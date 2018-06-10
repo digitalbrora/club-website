@@ -51,6 +51,12 @@
   background-color: $primary-color;
   color: white;
   flex-shrink: 2;
+  img {
+    padding-top: 10px;
+  }
+  p {
+    font-family: 'Stardos Stencil', cursive;
+  }
 }
 
 .away-half  {
@@ -60,6 +66,12 @@
   background-color: $secondary-color;
   color: white;
   flex-shrink: 2;
+  img {
+    padding-top: 10px;
+  }
+  p {
+    font-family: 'Stardos Stencil', cursive;
+  }
 }
 
 .divider {
