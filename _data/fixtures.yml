@@ -19,3 +19,10 @@ fixtures:
     date: '2018-08-11'
     home-team: Fraserburgh
     kickoff: '15:00'
+  - away-score: '2'
+    away-team: Brora Rangers
+    competition: League
+    date: '2018-05-05'
+    home-score: '0'
+    home-team: Turriff Utd
+    kickoff: '15:00'
