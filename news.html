@@ -2,20 +2,18 @@
 layout: base
 menu: news
 ---
-<article class="secondary-content">
-{% for post in site.posts limit: 6 offset: 1 %}
-  <div class="secondary-content-block">
+<article class="lead-content">
+{% for post in site.posts %}
+  <div class="lead-content-block">
     <a href="{{ post.url }}">
-      {% if post.feature-image %}
-      <img src="{{ post.feature-image | replace: '.', '-thumbnail.' }}" alt="{{ post.title }}">
-      {% else %}
-      <img src="http://via.placeholder.com/135x90" alt="{{ post.title }}">
-      {% endif %}
+      <img src="{{ post.feature-image | replace: '.', '-large.' }}" alt="{{ post.title }}">
     </a>
+  </div>
+  <div class="lead-content-block">
     <a href="{{ post.url }}">
-      <h1>{{ post.title }}</h1>
+      <h1 class="title">{{ post.title }}</h1>
     </a>
-    <p>{{post.excerpt | strip_html | truncate: 60 }}</p>
+    <p>{{post.excerpt | strip_html}}</p>
   </div>
 {% endfor %}
 </article>

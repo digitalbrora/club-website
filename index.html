@@ -44,7 +44,8 @@ layout: base
     </div>
     <div class="divider">
       <p class="lotto-ball">VS</p>
-      <p>{{ match.date | date: "%e %b, '%y" }}</p>
+      <p><datetime="{{match.date}}">{{ match.date | date: "%e %b, '%y" }}</datetime></p>
+      <time>{{ match.kickoff }}</time>
     </div>
     <div class="away-half">
       <p>{{ match.away-team | upcase }}</p>
@@ -52,9 +53,10 @@ layout: base
   </div>
   {% endfor %}
 </section>
-
+<br>
+<hr>
+<br>
 {% assign lotto = site.posts | where: "category", "lotto" %}
-
 {% for results in lotto limit: 1 %}
 <ul class="lotto lotto-large">
   {% for number in results.winning-numbers %}
