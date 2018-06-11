@@ -3,6 +3,7 @@ fixtures:
     competition: League
     date: '2018-07-28'
     home-team: Brora Rangers
+    hospitality: true
     kickoff: '15:00'
   - away-team: Brora Rangers
     competition: League
