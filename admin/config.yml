@@ -82,16 +82,17 @@ collections:
     files:
       - label: "Fixtures"
         name: "fixtures"
-        file: "_data/fixtures.yml"
+        file: "_data/fixtures.json"
         fields:
           - label: Fixtures
             name: fixtures
             widget: list
             fields:
               - {label: Date, name: date, widget: date}
-              - {label: Kickoff, name: kickoff, widget: string, default: 15:00}
+              - {label: Kickoff, name: kickoff, widget: string, default: "15:00"}
               - {label: Venue, name: venue, widget: string, required: false}
-              - {label: Competition, name: competition, widget: select, options: ["League", "Scottish Cup", "League Cup", "North of Scotland Cup"]}
+              - {label: Competition, name: competition, widget: select, options: ["League", "Scottish Cup", "League Cup", "North of Scotland Cup"], default: "League"}
+              - {label: Hospitality, name: hospitality, widget: boolean}
               - {label: Home Team, name: home-team, widget: relation, collection: clubs, searchFields: ["title"], valueField: "title", displayFields: ["title"]}
               - {label: Away Team, name: away-team, widget: relation, collection: clubs, searchFields: ["title"], valueField: "title", displayFields: ["title"]}
               - {label: Home Score, name: home-score, widget: string, required: false}

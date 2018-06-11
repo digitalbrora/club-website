@@ -123,13 +123,15 @@ a {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%; }
 
 .home-half {
   -ms-flex-preferred-size: 35%;
   flex-basis: 35%;
   text-align: center;
-  min-height: 200px;
+  min-height: 105px;
   background-color: #a01a01;
   color: white;
   -ms-flex-negative: 2;
@@ -143,7 +145,7 @@ a {
   -ms-flex-preferred-size: 35%;
   flex-basis: 35%;
   text-align: center;
-  min-height: 200px;
+  min-height: 105px;
   background-color: #333;
   color: white;
   -ms-flex-negative: 2;
@@ -157,14 +159,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 200px;
+  min-height: 105px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #a01a01), color-stop(50%, #333));
   background-image: linear-gradient(to right, #a01a01 50%, #333 50%);
   color: white;
@@ -173,7 +175,9 @@ a {
   .divider .lotto-ball {
     margin: 30% 0;
     padding: 10px;
-    font-size: 2em; }
+    font-size: 2em;
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #a01a01), color-stop(50%, #333));
+    background-image: linear-gradient(to left, #a01a01 50%, #333 50%); }
 
 .lotto-large {
   display: -webkit-box;

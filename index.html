@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+{% comment %} This section appears to be pretty much finished though the css needs adjusted to prevent a single orphan flexbox secondary article {% endcomment %}
   <article class="lead-content">
   {% for post in site.posts limit: 1 %}
     <div class="lead-content-block">
@@ -32,30 +33,22 @@ layout: base
       {{ post.description }}
     </div>
   {% endfor %}
-</section>
+  </section>
 
   <hr>
+  {% comment %} Lots to do here ... the logic between fixtures and clubs needs tidied, and club badges shouldn't live in articles {% endcomment %}
 <section>
-  {% assign outstanding = site.data.fixtures %}
-  {% for match in outstanding.fixtures limit: 1 %}
+  {% assign outstanding = site.data.fixtures.season %}
+  {% for match in outstanding limit: 1 %}
   <div  class="fixture-block">
     <div class="home-half">
-      <img src="/images/articles/{{ match.home-team | replace: " ", "-" | downcase }}-small.png" alt="" width="90px;">
-      <p>{{ match.home-team | upcase }}</p>
+      <img src="/images/assets/badges/{{ match.home-team | replace: " ", "-" }}.png" alt="" height="90px;">
     </div>
     <div class="divider">
       <p class="lotto-ball">VS</p>
-      <p class="remove-margin"><datetime="{{match.date}}">{{ match.date | date: "%e %b, '%y" }}</datetime></p>
-      <p class="remove-margin"><time>{{ match.kickoff }}</time></p>
-      {% for club in site.clubs %}
-      {% if match.home-team == club.title %}
-      <p class="remove-margin">{{ club.ground }}</p>
-      {% endif %}
-      {% endfor %}
     </div>
     <div class="away-half">
-      <img src="/images/articles/{{ match.away-team | replace: " ", "-" | downcase }}-small.png" alt="" width="90px;">
-      <p>{{ match.away-team | upcase }}</p>
+      <img src="/images/assets/badges/{{ match.away-team | replace: " ", "-" }}.png" alt="" height="90px;">
     </div>
   </div>
   {% endfor %}
@@ -76,6 +69,24 @@ layout: base
 {% endfor %}
 
 <hr>
+
+<section>
+  {% assign completed = site.data.fixtures.season | where: "home-score", "0" %}
+
+  {% for match in completed limit: 1 %}
+  <div  class="fixture-block">
+    <div class="home-half">
+      <img src="/images/assets/badges/{{ match.home-team | replace: " ", "-" }}.png" alt="" height="90px;">
+    </div>
+    <div class="divider">
+      <p class="lotto-ball">VS</p>
+    </div>
+    <div class="away-half">
+      <img src="/images/assets/badges/{{ match.away-team | replace: " ", "-" }}.png" alt="" height="90px;">
+    </div>
+  </div>
+  {% endfor %}
+</section>
 
 <h2>Sponsors Spotlight</h2>
 <p>A section highlight one of our sponsors ... linked to a Sponsors page</p>
