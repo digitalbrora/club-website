@@ -36,28 +36,40 @@ layout: base
   </section>
 
   <hr>
-  {% comment %} Lots to do here ... the logic between fixtures and clubs needs tidied, and club badges shouldn't live in articles {% endcomment %}
+  {% comment %} Lots to do here ... the logic between fixtures and clubs needs tidied {% endcomment %}
 <section>
-  {% assign outstanding = site.data.fixtures.season %}
-  {% for match in outstanding limit: 1 %}
+  {% assign fixtures = site.data.fixtures.current %}
+  {% for match in fixtures reversed %}
+    {% unless match.home-score %}
+      {% capture home-team %}{{ match.home-team }}{% endcapture %}
+      {% capture away-team %}{{ match.away-team }}{% endcapture %}
+      {% capture competition %}{{ match.competition }}{% endcapture %}
+      {% capture date %}{{ match.date }}{% endcapture %}
+    {% endunless %}
+  {% endfor %}
+  <h2 class="section-title">Next Game</h2>
   <div  class="fixture-block">
     <div class="home-half">
-      <img src="/images/assets/badges/{{ match.home-team | replace: " ", "-" }}.png" alt="" height="90px;">
+      <img src="/images/assets/badges/{{ home-team | replace: " ", "-" }}.png" alt="" height="90px;">
     </div>
     <div class="divider">
       <p class="lotto-ball">VS</p>
     </div>
     <div class="away-half">
-      <img src="/images/assets/badges/{{ match.away-team | replace: " ", "-" }}.png" alt="" height="90px;">
+      <img src="/images/assets/badges/{{ away-team | replace: " ", "-" }}.png" alt="" height="90px;">
+    </div>
+    <div class="match-details">
+      <p>{{ date }}</p>
+      <button type="button" name="button">Book Hospitality</button>
     </div>
   </div>
-  {% endfor %}
 </section>
 <br>
 <hr>
 <br>
 {% assign lotto = site.posts | where: "category", "lotto" %}
 {% for results in lotto limit: 1 %}
+<h2 class="section-title">Lotto</h2>
 <ul class="lotto lotto-large">
   {% for number in results.winning-numbers %}
   <li class="lotto-ball">{{ number }}</li>
@@ -65,29 +77,43 @@ layout: base
 </ul>
 <p>Next week's Bonus £{{ results.bonus }}</p>
 <p>Next week's Jackpot £{{ results.jackpot }}</p>
-{{ results.excerpt }}
+<button type="button" name="button">Play the Lotto</button>
 {% endfor %}
 
 <hr>
 
 <section>
-  {% assign completed = site.data.fixtures.season | where: "home-score", "0" %}
+  {% assign completed = site.data.fixtures.current %}
 
-  {% for match in completed limit: 1 %}
+  {% for match in fixtures %}
+    {% if match.home-score %}
+      {% capture home-team %}{{ match.home-team }}{% endcapture %}
+      {% capture away-team %}{{ match.away-team }}{% endcapture %}
+      {% capture competition %}{{ match.competition }}{% endcapture %}
+      {% capture date %}{{ match.date }}{% endcapture %}
+      {% capture home-score %}{{ match.home-score }}{% endcapture %}
+      {% capture away-score %}{{ match.away-score }}{% endcapture %}
+    {% endif %}
+  {% endfor %}
+{% if home-score %}
+<h2 class="section-title">Latest Result</h2>
   <div  class="fixture-block">
     <div class="home-half">
-      <img src="/images/assets/badges/{{ match.home-team | replace: " ", "-" }}.png" alt="" height="90px;">
+      <img src="/images/assets/badges/{{ home-team | replace: " ", "-" }}.png" alt="" height="90px;">
     </div>
     <div class="divider">
       <p class="lotto-ball">VS</p>
     </div>
     <div class="away-half">
-      <img src="/images/assets/badges/{{ match.away-team | replace: " ", "-" }}.png" alt="" height="90px;">
+      <img src="/images/assets/badges/{{ away-team | replace: " ", "-" }}.png" alt="" height="90px;">
+    </div>
+    <div class="match-details-score">
+      <span>{{ home-score }} - {{ away-score }}</span>
     </div>
   </div>
-  {% endfor %}
+{% endif %}
 </section>
-
+<hr>
 <h2>Sponsors Spotlight</h2>
 <p>A section highlight one of our sponsors ... linked to a Sponsors page</p>
 <p>The Sponsor spotlight article will also appear as a news item ... for quiet news weeks</p>

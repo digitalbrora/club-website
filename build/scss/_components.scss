@@ -1,3 +1,8 @@
+.section-title  {
+  font-size: 1.5em;
+  text-align: center;
+}
+
 .lead-content {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +94,11 @@
     font-size: 2em;
     background-image: linear-gradient(to left,$primary-color 50%, $secondary-color 50%);
   }
+}
+
+.match-details-score  {
+  padding-top: 0.5em;
+  font-size: 2em;
 }
 
 .lotto-large  {

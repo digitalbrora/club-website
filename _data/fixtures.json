@@ -1,11 +1,13 @@
 {
-  "fixtures": [
+  "current": [
     {
       "date": "2018-07-28",
       "kickoff": "15:00",
       "hospitality": true,
       "home-team": "Brora Rangers",
-      "away-team": "Wick Academy"
+      "away-team": "Wick Academy",
+      "home-score": "3",
+      "away-score": "0"
     },
     {
       "date": "2018-08-04",
@@ -18,7 +20,7 @@
       "kickoff": "20:00",
       "hospitality": true,
       "home-team": "Brora Rangers",
-      "away-team": "Clachnacuddinch"
+      "away-team": "Clachnacuddin"
     },
     {
       "date": "2018-08-11",
