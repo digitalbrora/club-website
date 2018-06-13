@@ -59,7 +59,9 @@ layout: base
         <li>{{ home-team }}</li>
         <li>vs</li>
         <li>{{ away-team }}</li>
+        {% if hospitality == 'true' %}
         <button type="button" name="button">Book Hospitality</button>
+        {% endif %}
       </ul>
     </div>
   </div>
